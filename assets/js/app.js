@@ -26,7 +26,7 @@ function renderBooks(argument) {
 
 
 		 	console.log('Title: ' + data[i].volumeInfo.title);
-		 	console.log('Author: ' + data[i].volumeInfo.authors[0]);
+		 	console.log('Author: ' + data[i].volumeInfo.authors);
 		 	console.log('Publisher: ' + data[i].volumeInfo.publisher);
 			console.log('Thumbnail: ' + data[i].volumeInfo.imageLinks.thumbnail);
 			console.log('Small Thumbnail: ' + data[i].volumeInfo.imageLinks.smallThumbnail);
@@ -36,7 +36,7 @@ function renderBooks(argument) {
 
 			const book = data[i].volumeInfo;
 			const title = book.title;
-			const author = book.authors[0];
+			const author = book.authors;
 			const publisher = book.publisher;
 			const image = book.imageLinks;
 			const thumbnail = image.thumbnail;
@@ -52,6 +52,7 @@ function renderBooks(argument) {
 			const bookTitle = document.createElement('p');
 			bookTitle.setAttribute('class', 'title');
 			bookTitle.textContent = 'Title: ' + title;
+			bookTitle.href = preview;
 			// author
 			const bookAuthor = document.createElement('p');
 			bookAuthor.setAttribute('class', 'author');

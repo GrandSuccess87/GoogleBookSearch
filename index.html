@@ -18,26 +18,31 @@
     </head>
     <body>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <h2>Book Finder</h2>
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h2 class="display-4">The Ultimate Book Finder</h2>
+                    <hr class="my-4">
+                    <p class="lead">Search the worlds most comprehensive index of full-text books</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                    <input type="text" name="search" class="form-control" id="search" placeholder=" Please Type the Author or Title" size="80">
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <button class="btn btn-success" role="button" type="button" id="searchButton">Submit</button>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
-                <input type="text" name="search" id="search" placeholder=" Please Type the Author or Title" size="80">
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                <button type="button" id="searchButton">Submit</button>
-            </div>
-        </div>
-    
+        
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div id="viewerCanvas" style="width: 600px; height: 500px"></div>
             </div>
+            </div>
         </div>
-     </div>
+    </div>
  
 
 	<!-- <script src="js/vendor/jquery.js"></script> -->
