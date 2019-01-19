@@ -25,18 +25,18 @@ function renderBooks(argument) {
 		 for(var i = 0; i < data.length; i++) {
 
 
-		 	console.log(data[i].volumeInfo.title);
-		 	console.log(data[i].volumeInfo.authors);
-		 	console.log(data[i].volumeInfo.publisher);
-			console.log(data[i].volumeInfo.imageLinks.thumbnail);
-			console.log(data[i].volumeInfo.imageLinks.smallThumbnail);
-			console.log(data[i].volumeInfo.previewLink);
+		 	console.log('Title: ' + data[i].volumeInfo.title);
+		 	console.log('Author: ' + data[i].volumeInfo.authors[0]);
+		 	console.log('Publisher: ' + data[i].volumeInfo.publisher);
+			console.log('Thumbnail: ' + data[i].volumeInfo.imageLinks.thumbnail);
+			console.log('Small Thumbnail: ' + data[i].volumeInfo.imageLinks.smallThumbnail);
+			console.log('Preview: ' + data[i].volumeInfo.previewLink);
 
 			// declare variables for the book data
 
 			const book = data[i].volumeInfo;
 			const title = book.title;
-			const author = book.authors;
+			const author = book.authors[0];
 			const publisher = book.publisher;
 			const image = book.imageLinks;
 			const thumbnail = image.thumbnail;
@@ -49,27 +49,36 @@ function renderBooks(argument) {
 
 			// assign the title, author, publisher, image, and preview link to the new div
 			//title
-			const pTitle = document.createElement('p');
-			pTitle.textContent = title;
+			const bookTitle = document.createElement('p');
+			bookTitle.setAttribute('class', 'title');
+			bookTitle.textContent = 'Title: ' + title;
 			// author
-			const pAuthor = document.createElement('p');
-			pAuthor.textContent = author;
+			const bookAuthor = document.createElement('p');
+			bookAuthor.setAttribute('class', 'author');
+			bookAuthor.textContent = 'Author: ' + author;
 			// publisher;
-			const pPublisher = document.createElement('p');
-			pAuthor.textContent = publisher;
+			const bookPublisher = document.createElement('p');
+			bookPublisher.setAttribute('class', 'publisher');
+			bookPublisher.textContent = 'Publisher: ' + publisher;
 			// smallThumbnail;
-			const pSmallThumbnail = document.createElement('p');
-			pSmallThumbnail.textContent = smallThumbnail;
+			const bookImage = document.createElement('img');
+			bookImage.setAttribute('class', 'smallThumbnail');
+			// bookImage.textContent = 'Image: ' + smallThumbnail;
+			bookImage.setAttribute('src', smallThumbnail);
 			// preview;
-			const pPreview = document.createElement('p');
-			pPreview.textContent = preview;
+			const bookPreview = document.createElement('a');
+			const linkText = document.createTextNode('Preview');
+			bookPreview.appendChild(linkText);
+			bookPreview.title = 'Book Preview';
+			bookPreview.setAttribute('class', 'preview');
+			bookPreview.href = preview;
 
 			// append the data to the newBookDiv
-			newBookDiv.appendChild(pTitle);
-			newBookDiv.appendChild(pAuthor);
-			newBookDiv.appendChild(pPublisher);
-			newBookDiv.appendChild(pSmallThumbnail);
-			newBookDiv.appendChild(pPreview);
+			newBookDiv.appendChild(bookTitle);
+			newBookDiv.appendChild(bookAuthor);
+			newBookDiv.appendChild(bookPublisher);
+			newBookDiv.appendChild(bookImage);
+			newBookDiv.appendChild(bookPreview);
 			// append this div to the viewCanvas div
 			viewerCanvas.appendChild(newBookDiv);
 		 }
