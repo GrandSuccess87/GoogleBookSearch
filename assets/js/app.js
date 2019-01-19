@@ -48,17 +48,28 @@ function renderBooks(argument) {
 			newBookDiv.setAttribute('class', 'book')
 
 			// assign the title, author, publisher, image, and preview link to the new div
-			// const p = document.createElement('p');
-			// p.textContent = title;
-			newBookDiv.textContent = title;
-			// newBookDiv.textContent = author;
-			// newBookDiv.textContent = publisher;
-			// newBookDiv.textContent = smallThumbnail;
-			// newBookDiv.textContent = preview;
+			//title
+			const pTitle = document.createElement('p');
+			pTitle.textContent = title;
+			// author
+			const pAuthor = document.createElement('p');
+			pAuthor.textContent = author;
+			// publisher;
+			const pPublisher = document.createElement('p');
+			pAuthor.textContent = publisher;
+			// smallThumbnail;
+			const pSmallThumbnail = document.createElement('p');
+			pSmallThumbnail.textContent = smallThumbnail;
+			// preview;
+			const pPreview = document.createElement('p');
+			pPreview.textContent = preview;
 
 			// append the data to the newBookDiv
-			// p.appendChild(newBookDiv);
-
+			newBookDiv.appendChild(pTitle);
+			newBookDiv.appendChild(pAuthor);
+			newBookDiv.appendChild(pPublisher);
+			newBookDiv.appendChild(pSmallThumbnail);
+			newBookDiv.appendChild(pPreview);
 			// append this div to the viewCanvas div
 			viewerCanvas.appendChild(newBookDiv);
 		 }
