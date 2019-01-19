@@ -19,7 +19,7 @@ function renderBooks(argument) {
 		 console.log(callbackData);
 
 		 const data = callbackData.items;
-
+		 const viewerCanvas = document.getElementById('viewerCanvas')
 
 		 // loop through the books that match the query
 		 for(var i = 0; i < data.length; i++) {
@@ -32,12 +32,35 @@ function renderBooks(argument) {
 			console.log(data[i].volumeInfo.imageLinks.smallThumbnail);
 			console.log(data[i].volumeInfo.previewLink);
 
+			// declare variables for the book data
+
 			const book = data[i].volumeInfo;
 			const title = book.title;
 			const author = book.authors;
-			const image = book.imageLinks.thumbnail;
-			const smallThumbnail = book.imageLinks.smallThumbnail;
+			const publisher = book.publisher;
+			const image = book.imageLinks;
+			const thumbnail = image.thumbnail;
+			const smallThumbnail = image.smallThumbnail;
 			const preview = book.previewLink;
+
+			// for each book in the array create a new div
+			const newBookDiv = document.createElement('div');
+			newBookDiv.setAttribute('class', 'book')
+
+			// assign the title, author, publisher, image, and preview link to the new div
+			// const p = document.createElement('p');
+			// p.textContent = title;
+			newBookDiv.textContent = title;
+			// newBookDiv.textContent = author;
+			// newBookDiv.textContent = publisher;
+			// newBookDiv.textContent = smallThumbnail;
+			// newBookDiv.textContent = preview;
+
+			// append the data to the newBookDiv
+			// p.appendChild(newBookDiv);
+
+			// append this div to the viewCanvas div
+			viewerCanvas.appendChild(newBookDiv);
 		 }
 
 	
@@ -45,16 +68,3 @@ function renderBooks(argument) {
 }
 
 document.getElementById('searchButton').addEventListener('click', renderBooks, false);
-
-
-
-// example of embedded viewer 
-// google.books.load();
-
-//       function initialize() {
-//         var viewer = new google.books.DefaultViewer(document.getElementById('viewerCanvas'));
-//         viewer.load('ISBN:0738531367');
-//       }
-
-//       google.books.setOnLoadCallback(initialize);
- 
