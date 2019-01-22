@@ -1,11 +1,14 @@
-alert('Please enter an author or title of a book to search the database');
+// alert('Please enter an author or title of a book to search the database');
 function bookQuery() {
 	console.log("Render Books Function Successfully Loaded");
 	// Grab the input from the user
 	const search = document.querySelector('#search').value;
-	// const search = $('#search').val().trim();
+	//check to see if the input field is empty
+	if(search == '' || search == null) {
+		alert('Your search field is empty.  Please enter the book or author you would like to search.');
+	} else {
 	console.log(search);
-
+	}
 	// send an HTTP GET request to the API
 	$.ajax({
 		url: "https://www.googleapis.com/books/v1/volumes?q=" + search,
@@ -16,7 +19,7 @@ function bookQuery() {
 	}).then(function(callbackData) {
 		renderBook(callbackData);
 		// blankQuery(callbackData);
-		// // IncorrectQuery();
+
 	});
 }
 
@@ -78,30 +81,6 @@ newBookDiv.appendChild(bookPreview);
 // append this div to the viewCanvas div
 viewerCanvas.appendChild(newBookDiv);
 });
-
 }
 
-function blankQuery(string) {
-	return !string.replace(/\s+/, '').length;
-
-	// if(string == ' ' || string == null) {
-	// 	alert('Please enter a book title or author');
-	// 	return false;
-	// }
-	// 	return true;
-};
-
-function isEmpty() {
-	if( blankQuery(this.value)) {
-		 console.log("SEARCH FIELD IS EMPTY")
-	 };
- }
-
-
-// function incorrectQuery() {
-//
-// };
-
-
 document.getElementById('searchButton').addEventListener('click', bookQuery, false);
-document.getElementById("search").addEventListener("input", isEmpty);
