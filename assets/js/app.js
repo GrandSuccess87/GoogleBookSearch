@@ -1,34 +1,28 @@
-// alert('Please enter an author or title of a book to search the database');
 function bookQuery() {
-	console.log("Render Books Function Successfully Loaded");
-	// Grab the input from the user
+	// Grabs the user input
 	const search = document.querySelector('#search').value;
-	//check to see if the input field is empty
+	//checks to see if the input field is empty
 	if(search == '' || search == null) {
 		alert('Your search field is empty.  Please enter the book or author you would like to search.');
-	} else {
-	console.log(search);
-	}
+		} else {
 	// send an HTTP GET request to the API
 	$.ajax({
 		url: "https://www.googleapis.com/books/v1/volumes?q=" + search,
-		// + intitle + inauthor + inpublisher + key=AIzaSyDyNOO9LVN_GjuouA8pqHHRSXtBB_RZO8Y
 		type: 'GET',
 		data: search,
 		dataType: "json"
 	}).then(function(callbackData) {
 		renderBook(callbackData);
-		// blankQuery(callbackData);
-
 	});
 }
+}
 
-// create a function that will loop through the callbackData..renderBook()
+// function that will loop through the callbackData
 function renderBook(callbackData) {
 const data = callbackData.items;
 const viewerCanvas = document.getElementById('viewerCanvas')
 
-// loop through the book data
+// loops through the book data
 data.forEach(function(bookData) {
 // declare variables for the book data
 const book = bookData.volumeInfo;
@@ -44,25 +38,23 @@ const preview = book.previewLink;
 const newBookDiv = document.createElement('div');
 newBookDiv.setAttribute('class', 'book')
 
-// assign the title, author, publisher, image, and preview link to the new div
+// assign the title, author, publisher, image, and preview link then append to the new div
 
 //title
-const bookTitle = document.createElement('p');
+const bookTitle = document.createElement('div');
 bookTitle.setAttribute('class', 'title');
 bookTitle.textContent = 'Title: ' + title;
-bookTitle.href = preview;
 // author
-const bookAuthor = document.createElement('p');
+const bookAuthor = document.createElement('div');
 bookAuthor.setAttribute('class', 'author');
 bookAuthor.textContent = 'Author: ' + author;
 // publisher;
-const bookPublisher = document.createElement('p');
+const bookPublisher = document.createElement('div');
 bookPublisher.setAttribute('class', 'publisher');
 bookPublisher.textContent = 'Publisher: ' + publisher;
 // smallThumbnail;
 const bookImage = document.createElement('img');
 bookImage.setAttribute('class', 'smallThumbnail');
-// bookImage.textContent = 'Image: ' + smallThumbnail;
 bookImage.setAttribute('src', smallThumbnail);
 // preview;
 const bookPreview = document.createElement('a');
@@ -73,11 +65,11 @@ bookPreview.setAttribute('class', 'preview');
 bookPreview.href = preview;
 
 // append the data to the newBookDiv
+newBookDiv.appendChild(bookPreview);
 newBookDiv.appendChild(bookTitle);
 newBookDiv.appendChild(bookAuthor);
 newBookDiv.appendChild(bookPublisher);
 newBookDiv.appendChild(bookImage);
-newBookDiv.appendChild(bookPreview);
 // append this div to the viewCanvas div
 viewerCanvas.appendChild(newBookDiv);
 });
