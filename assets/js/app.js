@@ -81,11 +81,22 @@ viewerCanvas.appendChild(newBookDiv);
 
 }
 
-// function blankQuery(search) {
-// 	if(!search) {
-// 		alert('Please enter a book title or author');
-// 	}
-// };
+function blankQuery(string) {
+	return !string.replace(/\s+/, '').length;
+
+	// if(string == ' ' || string == null) {
+	// 	alert('Please enter a book title or author');
+	// 	return false;
+	// }
+	// 	return true;
+};
+
+function isEmpty() {
+	if( blankQuery(this.value)) {
+		 console.log("SEARCH FIELD IS EMPTY")
+	 };
+ }
+
 
 // function incorrectQuery() {
 //
@@ -93,3 +104,4 @@ viewerCanvas.appendChild(newBookDiv);
 
 
 document.getElementById('searchButton').addEventListener('click', bookQuery, false);
+document.getElementById("search").addEventListener("input", isEmpty);
