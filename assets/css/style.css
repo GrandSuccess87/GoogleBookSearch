@@ -1,5 +1,10 @@
 html,body {
-  background-color: black;
+  background-image: url("../images/Visions_of_Grandeur.jpg");
+  background-position: center;
+  /*background-repeat: no-repeat;*/
+  background-size: cover;
+  /*background-color: black;*/
+  opacity: 1.5;
   margin: 0;
   padding: 0;
   min-width: 100%;
@@ -13,10 +18,6 @@ html,body {
    -o-background-size: cover;
    background-size: cover;
 }
-
-/*.background {
-  background-image: url("../images/wave-64170_1920.jpg") no-repeat center center fixed;
-}*/
 
 .jumbotron {
 	background: transparent;
@@ -36,6 +37,8 @@ html,body {
 .publisher,
 .preview {
 	color: white;
+  font-size: 24px;
+  font-family: serif;
 }
 
 .smallThumbnail {
@@ -43,19 +46,19 @@ html,body {
 }
 
 a:link {
-	color: green;
-}
-
-a:visited {
 	color: yellow;
 }
 
-a:hover {
+a:visited {
 	color: hotpink;
 }
 
+a:hover {
+	color: black;
+}
+
 a:active {
-	color: purple;
+	color: red;
 }
 
 #viewerCanvas {
