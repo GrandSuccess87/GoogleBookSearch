@@ -58,7 +58,7 @@ bookImage.setAttribute('class', 'smallThumbnail');
 bookImage.setAttribute('src', smallThumbnail);
 // preview;
 const bookPreview = document.createElement('a');
-const linkText = document.createTextNode('Preview');
+const linkText = document.createTextNode('Read More');
 bookPreview.appendChild(linkText);
 bookPreview.title = 'Book Preview';
 bookPreview.setAttribute('class', 'preview');

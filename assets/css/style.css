@@ -1,5 +1,38 @@
 .background {
-    background-image: url("../images/wave-64170_1920.jpg");
+    background-color: black; 
+    /*background-image: url("../images/wave-64170_1920.jpg");*/
     background-size: cover;
     background-size: 100% 100%;
+}
+
+.jumbotron {
+	background: transparent;
+	color: white;
+}
+
+.hr {
+	border-bottom: 2px solid yellow;
+}
+
+.title,
+.author, 
+.publisher,
+.preview {
+	color: white;
+}
+
+a:link {
+	color: green;
+}
+
+a:visited {
+	color: yellow;
+}
+
+a:hover {
+	color: hotpink;
+}
+
+a:active {
+	color: purple;
 }
