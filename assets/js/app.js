@@ -43,15 +43,15 @@ newBookDiv.setAttribute('class', 'book')
 //title
 const bookTitle = document.createElement('div');
 bookTitle.setAttribute('class', 'title');
-bookTitle.textContent = 'Title: ' + title;
+bookTitle.textContent = title;
 // author
 const bookAuthor = document.createElement('div');
 bookAuthor.setAttribute('class', 'author');
-bookAuthor.textContent = 'Author: ' + author;
+bookAuthor.textContent = author;
 // publisher;
 const bookPublisher = document.createElement('div');
 bookPublisher.setAttribute('class', 'publisher');
-bookPublisher.textContent = 'Publisher: ' + publisher;
+bookPublisher.textContent = publisher;
 // smallThumbnail;
 const bookImage = document.createElement('img');
 bookImage.setAttribute('class', 'smallThumbnail');
