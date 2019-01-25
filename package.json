@@ -4,8 +4,7 @@
   "description": "A web application that allows a user to search the Google Books API and receive results based on a query",
   "main": "app.js",
   "scripts": {
-    "test": "mocha",
-    "start": "app.js"
+    "test": "mocha"
   },
   "engines": {
     "node": ">=5.9"
