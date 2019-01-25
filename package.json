@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "mocha",
-    "start": "node app.js"
+    "start": "node assets/js/app.js"
   },
   "repository": {
     "type": "git",
