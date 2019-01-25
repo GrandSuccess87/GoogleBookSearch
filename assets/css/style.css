@@ -41,8 +41,8 @@ html,body {
   font-family: serif;
 }
 
-.smallThumbnail {
-	margin: 10 0 25 0;
+.thumbnail {
+	margin: 10 0 30 0;
 }
 
 a:link {
@@ -63,5 +63,5 @@ a:active {
 
 #viewerCanvas {
 	text-align: center;
-	padding-left: 30%;
+	/*padding-left: 30%;*/
 }

@@ -78,7 +78,7 @@ bookImageLink.appendChild(bookImage);
 // imageDiv.appendChild(bookImageLink);
 // preview
 const bookPreview = document.createElement('a');
-const linkText = document.createTextNode('Read More');
+const linkText = document.createTextNode('Preview');
 bookPreview.appendChild(linkText);
 bookPreview.title = 'Book_Preview';
 bookPreview.setAttribute('class', 'preview');
