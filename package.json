@@ -7,6 +7,9 @@
     "test": "mocha",
     "start": "app.js"
   },
+  "engines": {
+    "node": ">=5.9"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GrandSuccess87/GoogleBookSearch.git"
