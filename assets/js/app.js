@@ -41,34 +41,54 @@ newBookDiv.setAttribute('class', 'book')
 // assign the title, author, publisher, image, and preview link then append to the new div
 
 //title
-const bookTitle = document.createElement('div');
+const titleDiv = document.createElement('p');
+const bookTitle = document.createElement('a');
+const titleLink = document.createTextNode(title);
+bookTitle.appendChild(titleLink);
+bookTitle.title = 'Book_Title'
 bookTitle.setAttribute('class', 'title');
-bookTitle.textContent = title;
+bookTitle.href = preview;
+titleDiv.appendChild(bookTitle);
 // author
-const bookAuthor = document.createElement('div');
+const authorDiv = document.createElement('p');
+const bookAuthor = document.createElement('a');
+const authorLink = document.createTextNode(author);
+bookAuthor.appendChild(authorLink);
+bookAuthor.title = 'Book_Author'
 bookAuthor.setAttribute('class', 'author');
-bookAuthor.textContent = author;
+bookAuthor.href = preview;
+authorDiv.appendChild(bookAuthor);
 // publisher;
-const bookPublisher = document.createElement('div');
+const publisherDiv = document.createElement('p');
+const bookPublisher = document.createElement('a');
+const publisherLink = document.createTextNode(publisher);
+bookPublisher.appendChild(publisherLink);
+bookPublisher.title = 'Book_Publisher';
 bookPublisher.setAttribute('class', 'publisher');
-bookPublisher.textContent = publisher;
-// smallThumbnail;
+bookPublisher.href = preview;
+publisherDiv.appendChild(bookPublisher);
+// book image;
+// const imageDiv = document.createElement('p');
+// const bookImageLink = document.createElement('a');
 const bookImage = document.createElement('img');
-bookImage.setAttribute('class', 'smallThumbnail');
+// bookImageLink.appendChild(bookImage);
+bookImage.setAttribute('class', 'thumbnail');
 bookImage.setAttribute('src', smallThumbnail);
+bookImage.href = preview;
+// imageDiv.appendChild(bookImage);
 // preview;
 const bookPreview = document.createElement('a');
 const linkText = document.createTextNode('Read More');
 bookPreview.appendChild(linkText);
-bookPreview.title = 'Book Preview';
+bookPreview.title = 'Book_Preview';
 bookPreview.setAttribute('class', 'preview');
 bookPreview.href = preview;
 
 // append the data to the newBookDiv
 newBookDiv.appendChild(bookPreview);
-newBookDiv.appendChild(bookTitle);
-newBookDiv.appendChild(bookAuthor);
-newBookDiv.appendChild(bookPublisher);
+newBookDiv.appendChild(titleDiv);
+newBookDiv.appendChild(authorDiv);
+newBookDiv.appendChild(publisherDiv);
 newBookDiv.appendChild(bookImage);
 // append this div to the viewCanvas div
 viewerCanvas.appendChild(newBookDiv);
