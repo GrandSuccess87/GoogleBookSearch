@@ -1,0 +1,27 @@
+{
+  "name": "book_search_software",
+  "version": "1.0.0",
+  "description": "A web application that allows a user to search the Google Books API and receive results based on a query",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GrandSuccess87/GoogleBookSearch.git"
+  },
+  "keywords": [
+    "javascript",
+    "api",
+    "ajax",
+    "json"
+  ],
+  "author": "GrandSuccess87",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GrandSuccess87/GoogleBookSearch/issues"
+  },
+  "homepage": "https://github.com/GrandSuccess87/GoogleBookSearch#readme",
+  "devDependencies": {
+  }
+}
