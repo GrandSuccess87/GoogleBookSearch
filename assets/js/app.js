@@ -1,12 +1,13 @@
 function bookQuery(event) {
 	event.preventDefault();
 	// Grabs the user input
-	const search = document.querySelector('#search').value;
+	const search = $("#search").val().trim();
 	localStorage.setItem("last search ", $("#search").val().trim());
+	localStorage.getItem("last search")
 	//checks to see if the input field is empty
 	if(search == '' || search == null) {
 		alert('Your search field is empty.  Please enter the book or author you would like to search.');
-		} else {
+	} else {
 	// send an HTTP GET request to the API
 	$.ajax({
 		url: "https://www.googleapis.com/books/v1/volumes?q=" + search,
@@ -16,7 +17,7 @@ function bookQuery(event) {
 	}).then(function(callbackData) {
 		renderBook(callbackData);
 	});
-}
+	}
 }
 
 // function that will loop through the callbackData
@@ -44,42 +45,54 @@ newBookDiv.setAttribute('class', 'book')
 // assign the title, author, publisher, image, and preview link then append to the new div
 
 //title
-const titleDiv = document.createElement('p');
+localStorage.setItem("title", title);
+localStorage.getItem("title");
+const title_section = document.createElement('p');
 const bookTitle = document.createElement('a');
 const titleLink = document.createTextNode(title);
 bookTitle.appendChild(titleLink);
 bookTitle.title = 'Book_Title'
 bookTitle.setAttribute('class', 'title');
 bookTitle.href = preview;
-titleDiv.appendChild(bookTitle);
+title_section.appendChild(bookTitle);
+
 // author
-const authorDiv = document.createElement('p');
+localStorage.setItem("author", author);
+localStorage.getItem("author");
+const auth_section = document.createElement('p');
 const bookAuthor = document.createElement('a');
 const authorLink = document.createTextNode(author);
 bookAuthor.appendChild(authorLink);
 bookAuthor.title = 'Book_Author'
 bookAuthor.setAttribute('class', 'author');
 bookAuthor.href = preview;
-authorDiv.appendChild(bookAuthor);
+auth_section.appendChild(bookAuthor);
+
 // publisher
-const publisherDiv = document.createElement('p');
+localStorage.setItem("publisher", publisher);
+localStorage.getItem("publisher");
+const pub_section = document.createElement('p');
 const bookPublisher = document.createElement('a');
 const publisherLink = document.createTextNode(publisher);
 bookPublisher.appendChild(publisherLink);
 bookPublisher.title = 'Book_Publisher';
 bookPublisher.setAttribute('class', 'publisher');
 bookPublisher.href = preview;
-publisherDiv.appendChild(bookPublisher);
+pub_section.appendChild(bookPublisher);
+
 // book image
-// const imageDiv = document.createElement('p');
+localStorage.setItem("thumbnail", smallThumbnail);
+localStorage.getItem("thumbnail");
 const bookImageLink = document.createElement('a');
 bookImageLink.href = preview;
 const bookImage = document.createElement('img');
 bookImage.setAttribute('class', 'thumbnail');
 bookImage.setAttribute('src', smallThumbnail);
 bookImageLink.appendChild(bookImage);
-// imageDiv.appendChild(bookImageLink);
+
 // preview
+localStorage.setItem("preview", preview);
+localStorage.getItem("preview");
 const bookPreview = document.createElement('a');
 const linkText = document.createTextNode('Preview');
 bookPreview.appendChild(linkText);
@@ -87,15 +100,17 @@ bookPreview.title = 'Book_Preview';
 bookPreview.setAttribute('class', 'preview');
 bookPreview.href = preview;
 
-// append the data to the newBookDiv
+// append all data to the newBookDiv
 newBookDiv.appendChild(bookPreview);
-newBookDiv.appendChild(titleDiv);
-newBookDiv.appendChild(authorDiv);
-newBookDiv.appendChild(publisherDiv);
+newBookDiv.appendChild(title_section);
+newBookDiv.appendChild(auth_section);
+newBookDiv.appendChild(pub_section);
 newBookDiv.appendChild(bookImageLink);
-// append this div to the viewCanvas div
+
+// appends new book div to the viewCanvas div
 viewerCanvas.appendChild(newBookDiv);
 });
+//empties search div
 $("#search").val("");
 }
 
