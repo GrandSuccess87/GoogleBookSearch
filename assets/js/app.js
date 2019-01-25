@@ -58,7 +58,7 @@ bookAuthor.title = 'Book_Author'
 bookAuthor.setAttribute('class', 'author');
 bookAuthor.href = preview;
 authorDiv.appendChild(bookAuthor);
-// publisher;
+// publisher
 const publisherDiv = document.createElement('p');
 const bookPublisher = document.createElement('a');
 const publisherLink = document.createTextNode(publisher);
@@ -67,16 +67,16 @@ bookPublisher.title = 'Book_Publisher';
 bookPublisher.setAttribute('class', 'publisher');
 bookPublisher.href = preview;
 publisherDiv.appendChild(bookPublisher);
-// book image;
+// book image
 // const imageDiv = document.createElement('p');
-// const bookImageLink = document.createElement('a');
+const bookImageLink = document.createElement('a');
+bookImageLink.href = preview;
 const bookImage = document.createElement('img');
-// bookImageLink.appendChild(bookImage);
 bookImage.setAttribute('class', 'thumbnail');
 bookImage.setAttribute('src', smallThumbnail);
-bookImage.href = preview;
-// imageDiv.appendChild(bookImage);
-// preview;
+bookImageLink.appendChild(bookImage);
+// imageDiv.appendChild(bookImageLink);
+// preview
 const bookPreview = document.createElement('a');
 const linkText = document.createTextNode('Read More');
 bookPreview.appendChild(linkText);
@@ -89,7 +89,7 @@ newBookDiv.appendChild(bookPreview);
 newBookDiv.appendChild(titleDiv);
 newBookDiv.appendChild(authorDiv);
 newBookDiv.appendChild(publisherDiv);
-newBookDiv.appendChild(bookImage);
+newBookDiv.appendChild(bookImageLink);
 // append this div to the viewCanvas div
 viewerCanvas.appendChild(newBookDiv);
 });
