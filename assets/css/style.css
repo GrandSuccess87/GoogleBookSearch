@@ -1,3 +1,11 @@
+* {
+  /* Box-model */
+  box-sizing: border-box;
+
+  /* Positioning */
+  margin: 0;
+}
+
 html,body {
   background-image: url("../images/Visions_of_Grandeur.jpg");
   background-position: center;
@@ -35,7 +43,8 @@ html,body {
 .title,
 .author,
 .publisher,
-.preview {
+.preview,
+.lead {
 	color: white;
   font-size: 24px;
   font-family: "Amazon Ember", Arial, sans-serif;
@@ -68,3 +77,252 @@ a:active {
 #viewerCanvas {
 	text-align: center;
 }
+
+/* IPAD PRO */
+@media only screen and (max-width:1024px) {
+  .thumbnail {
+    width: 35%;
+    height: 35%;
+  }
+
+  .title,
+  .author,
+  .publisher,
+  .preview {
+    color: white;
+    font-size: 30px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .title-text {
+    color: white;
+    font-size: 4.5rem;
+  }
+
+  .lead {
+    text-align: left;
+    color: white;
+    font-size: 38px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .bookSearch {
+    margin-bottom: 16%;
+  }
+}
+
+/* IPAD */
+@media only screen and (max-width: 768px) {
+  .thumbnail {
+    width: 35%;
+    height: 35%;
+  }
+  
+  .title,
+  .author,
+  .publisher,
+  .preview {
+    color: white;
+    font-size: 30px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .lead {
+    text-align: left;
+    color: white;
+    font-size: 35px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .title-text {
+    color: white;
+    font-size: 3.5rem;
+  }
+
+  .bookSearch {
+    margin-bottom: 8%;
+  }
+}
+
+@media only screen and (max-width: 640px){
+  .thumbnail {
+    width: 35%;
+    height: 40%;
+  }
+
+  .title,
+  .author,
+  .publisher,
+  .preview {
+    color: white;
+    font-size: 30px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .bookSearch {
+    margin-bottom: 16%;
+  }
+}
+
+/* PIXEL 2, PIXEL 2 XL */
+@media only screen and (max-width: 420px){
+   .thumbnail {
+    width: 45%;
+    height: 30%;
+  }
+
+  .title,
+  .author,
+  .publisher,
+  .preview {
+    color: white;
+    font-size: 20px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .lead {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .title-text {
+    text-align: center;    
+    color: white;
+    font-size: 3.5rem;
+  }
+
+   .bookSearch {
+    margin-top: 10px;
+    margin-bottom: 18%;
+  }
+}
+
+/* IPHONE 6/7/8/10 */
+@media only screen and (max-width: 375px){
+   .thumbnail {
+    width: 45%;
+    height: 31%;
+  }
+
+  .title,
+  .author,
+  .publisher,
+  .preview {
+    color: white;
+    font-size: 18px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .lead {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .bookSearch {
+    margin-bottom: 16%;
+  }
+}
+
+/* Galaxy S5 */
+@media only screen and (max-width: 360px){
+  .thumbnail {
+    width: 45%;
+    height: 30%;
+  }
+
+  .title-text {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+  }
+
+  .title,
+  .author,
+  .publisher,
+  .preview,
+  .lead {
+    color: white;
+    font-size: 18px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+  
+  .bookSearch {
+    margin-top: 10px;
+    margin-bottom: 18%;
+  }
+}
+
+/* IPHONE 5/SE */
+@media only screen and (max-width: 320px){
+   .thumbnail {
+    width: 45%;
+    height: 34%;
+  }
+
+  .title,
+  .author,
+  .publisher,
+  .preview {
+    color: white;
+    font-size: 18px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+ .lead {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .title-text {
+    color: white;
+    font-size: 2.5rem;
+  }
+
+   .bookSearch {
+      margin-bottom: 16%;
+  }
+}
+
+@media only screen and (max-width: 300px){
+   .thumbnail {
+    width: 45%;
+    height: 25%;
+  }
+
+  .title,
+  .author,
+  .publisher,
+  .preview {
+    color: white;
+    font-size: 16px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .bookSearch {
+    margin-bottom: 16%;
+  }
+}
+
+
+
+
+
