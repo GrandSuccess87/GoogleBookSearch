@@ -4,7 +4,8 @@
   "description": "A web application that allows a user to search the Google Books API and receive results based on a query",
   "main": "app.js",
   "scripts": {
-    "test": "mocha"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "engines": {
     "node": ">=5.9"
@@ -17,7 +18,11 @@
     "javascript",
     "api",
     "ajax",
-    "json"
+    "json",
+    "git",
+    "bootstrap 4.0",
+    "html",
+    "css"
   ],
   "author": "GrandSuccess87",
   "license": "ISC",
