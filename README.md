@@ -32,7 +32,7 @@ So the app is deployed <a href="https://grandsuccess87.github.io/GoogleBookSearc
 <hr>
 
 **Search Query with Title**
-<img src="images/GBS_Image1\2.png">
+<p><img src="images/GBS_Image2.png"></p>
 
 <img src="images/GBS_Image2b.png">
 
