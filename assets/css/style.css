@@ -82,7 +82,7 @@ a:active {
 @media only screen and (max-width: 4000px) {
   .thumbnail {
     width: 35%;
-    height: 30%;
+    height: 33%;
   }
   
   .title,
