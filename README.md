@@ -26,30 +26,30 @@ So the app is deployed <a href="https://grandsuccess87.github.io/GoogleBookSearc
 <hr>
 
 **Home Page**
-![Screenshot](images/GBS_Image1.png)
-<!-- <img src="images/GBS_Image1.png"> -->
+<!-- ![Screenshot](images/GBS_Image1.png) -->
+<img src="images/GBS_Image1.png">
 
 <hr>
 
 **Search Query with Title**
-<!-- <img src="images/GBS_Image12.png"> -->
+<img src="images/GBS_Image12.png">
 
-<!-- <img src="images/GBS_Image2b.png">
- -->
-<!-- <img src="images/GBS_Image2c.png"> -->
+<img src="images/GBS_Image2b.png">
+
+<img src="images/GBS_Image2c.png">
 
 
 <hr>
 
 **Search Query with Author**
-<!-- <img src="images/GBS_Image3.png"> -->
+<img src="images/GBS_Image3.png">
 
-<!-- <img src="images/GBS_Image3b.png"> -->
+<img src="images/GBS_Image3b.png">
 
 
 <hr>
 
 **Search Query with Topic**
-<!-- <img src="images/GBS_Image4.png"> -->
+<img src="images/GBS_Image4.png">
 
-<!-- <img src="images/GBS_Image4b.png"> -->
+<img src="images/GBS_Image4b.png">
