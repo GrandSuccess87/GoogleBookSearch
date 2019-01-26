@@ -24,20 +24,20 @@ So the app is deployed <a href="https://grandsuccess87.github.io/GoogleBookSearc
 *Thank You* 
 
 <hr>
-
+<!-- 
 **Home Page**
 ![Homepage](/images/image1.jpg)
-<!-- ![GitHub Logo](/images/logo.png) -->
+<!-[GitHub Logo](/images/logo.png) -->
 
-<hr>
+<!-- <hr> -->
 
-**Search Query with Title**
-![Homepage](/images/GBS_Image2.png)
+<!-- **Search Query with Title** -->
+<!-- ![Homepage](/images/GBS_Image2.png)
 
 ![Homepage](/images/GBS_Image2b.png)
 
-![Homepage](/images/GBS_Image2c.png)
-
+![Homepage](/images/GBS_Image2c.png) -->
+<!-- 
 
 <hr>
 
@@ -46,10 +46,11 @@ So the app is deployed <a href="https://grandsuccess87.github.io/GoogleBookSearc
 
 ![Homepage](/images/GBS_Image3b.png)
 
-
-<hr>
+ -->
+<!-- <hr>
 
 **Search Query with Topic**
 ![Homepage](/images/GBS_Image4.png)
 
 ![Homepage](/images/GBS_Image4b.png)
+ --> 
