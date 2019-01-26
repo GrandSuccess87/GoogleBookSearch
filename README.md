@@ -21,7 +21,7 @@ So the app is deployed <a href="https://grandsuccess87.github.io/GoogleBookSearc
 
 **Notes**
 <hr>
-**I had a lot of fun building this application and challenging myself in the process.  Although there is always room for improvement, I believe I was successful in retreiving the desired outcome and I feel great that I have learned so much throughout this process!**
+I had a lot of fun building this application and challenging myself in the process.  Although there is always room for improvement, I believe I was successful in retreiving the desired outcome and I feel great that I have learned so much throughout this process!
 *Thank You* 
 
 <hr>
