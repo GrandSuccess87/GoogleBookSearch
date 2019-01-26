@@ -26,13 +26,13 @@ So the app is deployed <a href="https://grandsuccess87.github.io/GoogleBookSearc
 <hr>
 
 **Home Page**
-![picture](images/image1.png)
+!(images/image1.png)
 <!-- <img src="images/GBS_Image1.png"> -->
 
 <hr>
 
 **Search Query with Title**
-<img src="images/GBS_Image12.png">
+<img src="images/GBS_Image1\2.png">
 
 <img src="images/GBS_Image2b.png">
 
