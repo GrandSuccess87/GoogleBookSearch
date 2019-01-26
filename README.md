@@ -26,7 +26,7 @@ So the app is deployed <a href="https://grandsuccess87.github.io/GoogleBookSearc
 <hr>
 
 **Home Page**
-![Homepage](images/image1.png)
+![Homepage](images/image1.jpg)
 <!-- <img src="images/GBS_Image1.png"> -->
 
 <hr>
