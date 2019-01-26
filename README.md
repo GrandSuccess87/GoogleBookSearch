@@ -20,6 +20,7 @@ A web application that allows a user to search a comprehensive index of full tex
 So the app is deployed <a href="https://grandsuccess87.github.io/GoogleBookSearch/">here</a> on Github.
 
 **Notes**
+<hr>
 **I had a lot of fun building this application and challenging myself in the process.  Although there is always room for improvement, I believe I was successful in retreiving the desired outcome and I feel great that I have learned so much throughout this process!**
 *Thank You* 
 
