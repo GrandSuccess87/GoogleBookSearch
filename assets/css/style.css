@@ -114,10 +114,45 @@ a:active {
   }
 }*/
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1205px) {
   .thumbnail {
     width: 35%;
-    height: 25%;
+    height: 45%;
+  }
+  
+  .title,
+  .author,
+  .publisher,
+  .preview {
+    color: white;
+    font-size: 34px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .lead {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .title-text {
+    text-align: center;
+    color: white;
+    font-size: 3.5rem;
+  }
+
+  .bookSearch {
+    margin-bottom: 8%;
+  }
+}
+
+@media only screen and (max-width: 1064px) {
+  .thumbnail {
+    width: 35%;
+    height: 45%;
   }
   
   .title,
@@ -189,7 +224,43 @@ a:active {
 @media only screen and (max-width: 1010px) {
   .thumbnail {
     width: 35%;
-    height: 25%;
+    height: 90%;
+  }
+  
+  .title,
+  .author,
+  .publisher,
+  .preview {
+    color: white;
+    font-size: 34px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .lead {
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .title-text {
+    text-align: center;
+    color: white;
+    font-size: 3.5rem;
+  }
+
+  .bookSearch {
+    margin-bottom: 8%;
+  }
+}
+
+/* WEB */
+@media only screen and (max-width: 992px) {
+  .thumbnail {
+    width: 35%;
+    height: 48%;
   }
   
   .title,
@@ -225,7 +296,7 @@ a:active {
 @media only screen and (max-width: 860px) {
   .thumbnail {
     width: 35%;
-    height: 20%;
+    height: 48%;
   }
   
   .title,
@@ -258,10 +329,10 @@ a:active {
 }
 
 /* WEB */
-@media only screen and (max-width: 836px) {
+@media only screen and (max-width: 845px) {
   .thumbnail {
     width: 35%;
-    height: 20%;
+    height: 48%;
   }
   
   .title,
@@ -269,7 +340,43 @@ a:active {
   .publisher,
   .preview {
     color: white;
-    font-size: 30px;
+    font-size: 34px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .lead {
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .title-text {
+    text-align: center;
+    color: white;
+    font-size: 3.5rem;
+  }
+
+  .bookSearch {
+    margin-bottom: 8%;
+  }
+}
+
+/* WEB */
+@media only screen and (max-width: 836px) {
+  .thumbnail {
+    width: 35%;
+    height: 48%;
+  }
+  
+  .title,
+  .author,
+  .publisher,
+  .preview {
+    color: white;
+    font-size: 26px;
     font-family: "Amazon Ember", Arial, sans-serif;
     font-weight: 400;
   }
@@ -295,6 +402,40 @@ a:active {
 
 /* IPAD */
 @media only screen and (max-width: 768px) {
+  .thumbnail {
+    width: 35%;
+    height: 30%;
+  }
+  
+  .title,
+  .author,
+  .publisher,
+  .preview {
+    color: white;
+    font-size: 30px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .lead {
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .title-text {
+    text-align: center;
+    color: white;
+    font-size: 3.5rem;
+  }
+
+  .bookSearch {
+    margin-bottom: 8%;
+  }
+}
+@media only screen and (max-width: 767px) {
   .thumbnail {
     width: 35%;
     height: 38%;
@@ -348,7 +489,7 @@ a:active {
   .lead {
     text-align: center;
     color: white;
-    font-size: 30px;
+    font-size: 26px;
     font-family: "Amazon Ember", Arial, sans-serif;
     font-weight: 400;
   }
@@ -363,6 +504,43 @@ a:active {
     margin-bottom: 8%;
   }
 }
+
+/* WEB */
+@media only screen and (max-width: 690px) {
+  .thumbnail {
+    width: 35%;
+    height: 48%;
+  }
+  
+  .title,
+  .author,
+  .publisher,
+  .preview {
+    color: white;
+    font-size: 30px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .lead {
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .title-text {
+    text-align: center;
+    color: white;
+    font-size: 3.5rem;
+  }
+
+  .bookSearch {
+    margin-bottom: 8%;
+  }
+}
+
 /* web */
 @media only screen and (max-width: 645px){
   .thumbnail {
