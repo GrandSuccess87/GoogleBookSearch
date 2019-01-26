@@ -10,7 +10,7 @@ function bookQuery(event) {
 	} else {
 	// send an HTTP GET request to the API
 	$.ajax({
-		url: "https://www.googleapis.com/books/v1/volumes?q=" + search,
+		url: "https://www.googleapis.com/books/v1/volumes?q=" + search + "&maxResults=30",
 		type: 'GET',
 		data: search,
 		dataType: "json"
