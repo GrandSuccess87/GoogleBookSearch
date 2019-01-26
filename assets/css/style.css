@@ -78,6 +78,77 @@ a:active {
 	text-align: center;
 }
 
+/* WEB */
+@media only screen and (max-width: 4000px) {
+  .thumbnail {
+    width: 35%;
+    height: 30%;
+  }
+  
+  .title,
+  .author,
+  .publisher,
+  .preview {
+    color: white;
+    font-size: 34px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .lead {
+    text-align: left;
+    color: white;
+    font-size: 35px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .title-text {
+    text-align: left;
+    color: white;
+    font-size: 3.5rem;
+  }
+
+  .bookSearch {
+    margin-bottom: 8%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .thumbnail {
+    width: 35%;
+    height: 25%;
+  }
+  
+  .title,
+  .author,
+  .publisher,
+  .preview {
+    color: white;
+    font-size: 34px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .lead {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .title-text {
+    text-align: center;
+    color: white;
+    font-size: 3.5rem;
+  }
+
+  .bookSearch {
+    margin-bottom: 8%;
+  }
+}
+
 /* IPAD PRO */
 @media only screen and (max-width:1024px) {
   .thumbnail {
@@ -95,13 +166,14 @@ a:active {
     font-weight: 400;
   }
 
-  .title-text {
+  .title-text {    
+    text-align: center;
     color: white;
     font-size: 4.5rem;
   }
 
   .lead {
-    text-align: left;
+    text-align: center;
     color: white;
     font-size: 38px;
     font-family: "Amazon Ember", Arial, sans-serif;
@@ -113,11 +185,47 @@ a:active {
   }
 }
 
-/* IPAD */
-@media only screen and (max-width: 768px) {
+/* WEB */
+@media only screen and (max-width: 1010px) {
   .thumbnail {
     width: 35%;
-    height: 35%;
+    height: 25%;
+  }
+  
+  .title,
+  .author,
+  .publisher,
+  .preview {
+    color: white;
+    font-size: 34px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .lead {
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .title-text {
+    text-align: center;
+    color: white;
+    font-size: 3.5rem;
+  }
+
+  .bookSearch {
+    margin-bottom: 8%;
+  }
+}
+
+/* WEB */
+@media only screen and (max-width: 860px) {
+  .thumbnail {
+    width: 35%;
+    height: 20%;
   }
   
   .title,
@@ -139,6 +247,7 @@ a:active {
   }
 
   .title-text {
+    text-align: left;
     color: white;
     font-size: 3.5rem;
   }
@@ -148,7 +257,114 @@ a:active {
   }
 }
 
-@media only screen and (max-width: 640px){
+/* WEB */
+@media only screen and (max-width: 836px) {
+  .thumbnail {
+    width: 35%;
+    height: 20%;
+  }
+  
+  .title,
+  .author,
+  .publisher,
+  .preview {
+    color: white;
+    font-size: 30px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .lead {
+    text-align: left;
+    color: white;
+    font-size: 35px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .title-text {
+    text-align: left;
+    color: white;
+    font-size: 3.5rem;
+  }
+
+  .bookSearch {
+    margin-bottom: 8%;
+  }
+}
+
+/* IPAD */
+@media only screen and (max-width: 768px) {
+  .thumbnail {
+    width: 35%;
+    height: 38%;
+  }
+  
+  .title,
+  .author,
+  .publisher,
+  .preview {
+    color: white;
+    font-size: 30px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .lead {
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .title-text {
+    text-align: center;
+    color: white;
+    font-size: 3.5rem;
+  }
+
+  .bookSearch {
+    margin-bottom: 8%;
+  }
+}
+
+@media only screen and (max-width: 766px) {
+  .thumbnail {
+    width: 35%;
+    height: 25%;
+  }
+  
+  .title,
+  .author,
+  .publisher,
+  .preview {
+    color: white;
+    font-size: 34px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .lead {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .title-text {
+    text-align: center;
+    color: white;
+    font-size: 3.5rem;
+  }
+
+  .bookSearch {
+    margin-bottom: 8%;
+  }
+}
+/* web */
+@media only screen and (max-width: 645px){
   .thumbnail {
     width: 35%;
     height: 40%;
@@ -166,6 +382,41 @@ a:active {
 
   .bookSearch {
     margin-bottom: 16%;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  .thumbnail {
+    width: 35%;
+    height: 38%;
+  }
+  
+  .title,
+  .author,
+  .publisher,
+  .preview {
+    color: white;
+    font-size: 30px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .lead {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .title-text {
+    text-align: center;
+    color: white;
+    font-size: 3.5rem;
+  }
+
+  .bookSearch {
+    margin-bottom: 8%;
   }
 }
 
@@ -301,6 +552,7 @@ a:active {
   }
 }
 
+/* WEB */
 @media only screen and (max-width: 300px){
    .thumbnail {
     width: 45%;
