@@ -25,6 +25,12 @@ So the app is deployed <a href="https://grandsuccess87.github.io/GoogleBookSearc
 **Search Query with Title**
 ![picture](images/GBS_Image2.png)
 
+**Search Query with Title**
+![picture](images/GBS_Image2b.png)
+
+**Search Query with Title**
+![picture](images/GBS_Image2c.png)
+
 **Search Query with Author**
 ![picture](images/GBS_Image3.png)
 
