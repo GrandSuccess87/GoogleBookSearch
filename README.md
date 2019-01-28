@@ -10,14 +10,16 @@ A web application that allows a user to search a comprehensive index of full tex
 3. Javascript
 4. Bootstrap 4.0
 5. AJAX/JSON
-5. HTML5
-6. CSS3
+6. Local Storage
+7. HTML5
+8. CSS3
 
 
 **Challenges**
-- Finding the appropriate tools and technologies to run my test cases
+- Finding the appropriate tools and technologies to run my test cases.  So far I've tried: mocha and chai as well as karma, but I am still working on this.
 - For some reason, deploying to heroku proved to be relatively difficult compared to my past experiences. (several times I received errors regarding inability to parse the package.json)  
 So the app is deployed <a href="https://grandsuccess87.github.io/GoogleBookSearch/">here</a> on Github.
+- Maintaining content between web browser tabs for the user.  I used local storage as a way to store data in the users' current browswer session.
 
 **Notes**
 <hr>
@@ -25,33 +27,31 @@ I had a lot of fun building this application and challenging myself in the proce
 Thank You
 
 <hr>
-<!-- 
+
+## Overview 
+
 **Home Page**
-![Homepage](/images/image1.jpg)
-<!-[GitHub Logo](/images/logo.png) -->
+![homepage](/assets/images/GBS_Image1.png)
 
-<!-- <hr> -->
+<hr>
 
-<!-- **Search Query with Title** -->
-<!-- ![Homepage](/images/GBS_Image2.png)
+**Search Query with Title**
+![title_image](/assets/images/GBS_Image2.png)
 
-![Homepage](/images/GBS_Image2b.png)
-
-![Homepage](/images/GBS_Image2c.png) -->
-<!-- 
+**Search Query with Title**
+![title_image](/assets/images/GBS_Image2b.png)
 
 <hr>
 
 **Search Query with Author**
-![Homepage](/images/GBS_Image3.png)
+![author_image](/assets/images/GBS_Image3.png)
 
-![Homepage](/images/GBS_Image3b.png)
+![author_image](/assets/images/GBS_Image3b.png)
 
- -->
-<!-- <hr>
+<hr>
 
 **Search Query with Topic**
-![Homepage](/images/GBS_Image4.png)
+![topic_image](/assets/images/GBS_Image4.png)
 
-![Homepage](/images/GBS_Image4b.png)
- --> 
+
+![topic_image](/assets/images/GBS_Image4b.png)
