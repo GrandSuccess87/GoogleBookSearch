@@ -4,11 +4,11 @@ function bookQuery(event) {
 	const search = $("#search").val().trim();
 	localStorage.setItem("last search ", $("#search").val().trim());
 	localStorage.getItem("last search")
-	//checks to see if the input field is empty
+	// Checks to see if the input field is empty
 	if(search == '' || search == null) {
 		alert('Your search field is empty.  Please enter the book or author you would like to search.');
 	} else {
-	// send an HTTP GET request to the API
+	// Sends an HTTP GET request to the API
 	$.ajax({
 		url: "https://www.googleapis.com/books/v1/volumes?q=" + search + "&maxResults=30",
 		type: 'GET',
@@ -20,15 +20,24 @@ function bookQuery(event) {
 	}
 }
 
-// function that will loop through the callbackData
+function enter_button () {
+	document.querySelector('#search').addEventListener("keyup", function(event) {
+	  event.preventDefault();
+	  if (event.keyCode === 13) {
+		document.getElementById('searchButton').click();
+	  }
+	});
+};
+
+// Loops through the callbackData
 function renderBook(callbackData) {
 const data = callbackData.items;
 const viewerCanvas = document.getElementById('viewerCanvas')
 $("#viewerCanvas").empty();
 
-// loops through the book data
+// Loops through the book data
 data.forEach(function(bookData) {
-// declare variables for the book data
+// Declare variables for the book data
 const book = bookData.volumeInfo;
 const title = book.title;
 const author = book.authors;
@@ -38,13 +47,17 @@ const thumbnail = image.thumbnail;
 const smallThumbnail = image.smallThumbnail;
 const preview = book.previewLink;
 
-// for each book in the array create a new div
+// if(search == '' || search == null) {
+// 		alert('Your search field is empty.  Please enter the book or author you would like to search.');
+// 	} else {
+
+// Creates a new div for each book in the array
 const newBookDiv = document.createElement('div');
 newBookDiv.setAttribute('class', 'book')
 
 // assign the title, author, publisher, image, and preview link then append to the new div
 
-//title
+// title
 localStorage.setItem("title", title);
 localStorage.getItem("title");
 const title_section = document.createElement('p');
@@ -102,18 +115,21 @@ bookPreview.setAttribute('class', 'preview');
 bookPreview.href = preview;
 link_section.appendChild(bookPreview);
 
-// append all data to the newBookDiv
+// Appends all data to the newBookDiv
 newBookDiv.appendChild(link_section);
 newBookDiv.appendChild(title_section);
 newBookDiv.appendChild(auth_section);
 newBookDiv.appendChild(pub_section);
 newBookDiv.appendChild(bookImageLink);
 
-// appends new book div to the viewCanvas div
+// Appends new book div to the viewCanvas div
 viewerCanvas.appendChild(newBookDiv);
 });
-//empties search div
+
+//Empties search div
 $("#search").val("");
 }
 
+// Invoke functions below
 document.getElementById('searchButton').addEventListener('click', bookQuery, false);
+enter_button();
