@@ -14,20 +14,6 @@ A web application that allows a user to search a comprehensive index of full tex
 7. HTML5
 8. CSS3
 
-
-**Challenges**
-- Finding the appropriate tools and technologies to run my test cases.  So far I've tried: mocha and chai as well as karma, but I am still working on this.
-- For some reason, deploying to heroku proved to be relatively difficult compared to my past experiences. (several times I received errors regarding inability to parse the package.json)  
-So the app is deployed <a href="https://grandsuccess87.github.io/GoogleBookSearch/">here</a> on Github.
-- Maintaining content between web browser tabs for the user.  I used local storage as a way to store data in the users' current browswer session.
-
-**Notes**
-<hr>
-I had a lot of fun building this application and challenging myself in the process.  Although there is always room for improvement, I believe I was successful in retreiving the desired outcome and I feel great that I have learned so much throughout this process!
-Thank You
-
-<hr>
-
 ## Overview 
 
 **Home Page**
@@ -53,5 +39,19 @@ Thank You
 **Search Query with Topic**
 ![topic_image](/assets/images/GBS_Image4.png)
 
-
+**Search Query with Topic**
 ![topic_image](/assets/images/GBS_Image4b.png)
+
+<hr>
+
+## Challenges
+1. Finding the appropriate tools and technologies to run my test cases.  So far I've tried: mocha and chai as well as karma, but I am still working on this.
+2. For some reason, deploying to heroku proved to be relatively difficult compared to my past experiences. (several times I received errors regarding inability to parse the package.json)  
+So the app is deployed <a href="https://grandsuccess87.github.io/GoogleBookSearch/">here</a> on Github.
+3. Maintaining content between web browser tabs for the user.  I used local storage as a way to store data in the users' current browswer session.
+
+## Notes
+I had a lot of fun building this application and challenging myself in the process.  Although there is always room for improvement, I believe I was successful in retreiving the desired outcome and I feel great that I have learned so much throughout this process!
+Thank You
+
+<hr>
