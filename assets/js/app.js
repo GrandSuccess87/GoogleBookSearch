@@ -93,15 +93,17 @@ bookImageLink.appendChild(bookImage);
 // preview
 localStorage.setItem("preview", preview);
 localStorage.getItem("preview");
+const link_section = document.createElement('p');
 const bookPreview = document.createElement('a');
 const linkText = document.createTextNode('Preview');
 bookPreview.appendChild(linkText);
 bookPreview.title = 'Book_Preview';
 bookPreview.setAttribute('class', 'preview');
 bookPreview.href = preview;
+link_section.appendChild(bookPreview);
 
 // append all data to the newBookDiv
-newBookDiv.appendChild(bookPreview);
+newBookDiv.appendChild(link_section);
 newBookDiv.appendChild(title_section);
 newBookDiv.appendChild(auth_section);
 newBookDiv.appendChild(pub_section);
