@@ -73,7 +73,7 @@ localStorage.setItem("publisher", publisher);
 localStorage.getItem("publisher");
 const pub_section = document.createElement('p');
 const bookPublisher = document.createElement('a');
-const publisherLink = document.createTextNode(publisher);
+const publisherLink = document.createTextNode('Published By ' + publisher);
 bookPublisher.appendChild(publisherLink);
 bookPublisher.title = 'Book_Publisher';
 bookPublisher.setAttribute('class', 'publisher');
