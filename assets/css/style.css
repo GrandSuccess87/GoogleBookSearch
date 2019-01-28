@@ -51,6 +51,7 @@ html,body {
   font-weight: 400;
 }
 
+
 .thumbnail {
 	margin: 10 0 30 0;
   width: 30%;
@@ -58,6 +59,12 @@ html,body {
   border: 3px black solid;
 }
 
+.preview {
+  margin-top: 2%;
+}
+.book {
+  border-bottom: 3px gray solid;
+}
 a:link {
 	color: yellow;
 }
