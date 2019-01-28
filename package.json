@@ -4,7 +4,7 @@
   "description": "A web application that allows a user to search the Google Books API and receive results based on a query",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "node app.js"
   },
   "engines": {
@@ -31,5 +31,9 @@
   },
   "homepage": "https://github.com/GrandSuccess87/GoogleBookSearch#readme",
   "devDependencies": {
+    "chai": "^4.2.0"
+  },
+  "dependencies": {
+    "mocha": "^5.2.0"
   }
 }
