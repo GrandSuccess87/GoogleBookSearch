@@ -17,7 +17,7 @@ A web application that allows a user to search a comprehensive index of full tex
 ## Challenges
 1. Finding the appropriate tools and technologies to run my test cases.  So far I've tried: mocha and chai as well as karma, but I am still working on this.
 2. For some reason, deploying to heroku proved to be relatively difficult compared to my past experiences. (several times I received errors regarding inability to parse the package.json)  
-- <bold> You can visit the application <a href="https://grandsuccess87.github.io/GoogleBookSearch/">here</a> on Github. </bold>
+<bold> You can visit the application <a href="https://grandsuccess87.github.io/GoogleBookSearch/">here</a> on Github. </bold>
 3. Maintaining content between web browser tabs for the user.  For now, I used local storage as a way to store data in the users' current browswer session.
 
 ## Overview 
