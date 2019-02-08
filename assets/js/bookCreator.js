@@ -21,8 +21,8 @@ function setBookAuthorAttributes(book, localStorage) {
 	const author = book.authors;
 	const preview = book.previewLink;
 
-	localStorage.setItem("author", author);
-	localStorage.getItem("author");
+	localStorage.setItem('author', author);
+	localStorage.getItem('author');
 
 	auth_section = document.createElement('p');
 	const bookAuthor = document.createElement('a');
@@ -39,8 +39,8 @@ function setBookPublisherAttributes (book, localStorage) {
 	const publisher = book.publisher;
 	const preview = book.previewLink;
 
-	localStorage.setItem("publisher", publisher);
-	localStorage.getItem("publisher");
+	localStorage.setItem('publisher', publisher);
+	localStorage.getItem('publisher');
 
 	pub_section = document.createElement('p');
 	const bookPublisher = document.createElement('a');
@@ -59,8 +59,8 @@ function setBookImageAttributes(book, localStorage) {
 	const smallThumbnail = image.smallThumbnail;	
 	const preview = book.previewLink;
 
-	localStorage.setItem("thumbnail", smallThumbnail);
-	localStorage.getItem("thumbnail");
+	localStorage.setItem('thumbnail', smallThumbnail);
+	localStorage.getItem('thumbnail');
 
 	bookImageLink = document.createElement('a');
 	bookImageLink.href = preview;
@@ -74,8 +74,8 @@ function setBookImageAttributes(book, localStorage) {
 function setBookPreview (book, localStorage) {
 	const preview = book.previewLink;
 
-	localStorage.setItem("preview", preview);
-	localStorage.getItem("preview");
+	localStorage.setItem('preview', preview);
+	localStorage.getItem('preview');
 
 	link_section = document.createElement('p');
 	const bookPreview = document.createElement('a');

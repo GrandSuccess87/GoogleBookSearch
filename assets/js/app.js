@@ -2,18 +2,18 @@ function bookQuery(event) {
 	event.preventDefault();
 	// Grabs the user input
 	const search = getSearchInput($('#search'));
-	localStorage.setItem("last search ", $('#search').val().trim());
-	localStorage.getItem("last search")
+	localStorage.setItem('last search ', $('#search').val().trim());
+	localStorage.getItem('last search')
 	// Checks to see if the input field is empty
 	if(search == '' || search == null) {
 		alert('Your search field is empty.  Please enter the book or author you would like to search.');
 	} else {
 	// Sends an HTTP GET request to the API
 	$.ajax({
-		url: "https://www.googleapis.com/books/v1/volumes?q=" + search + "&maxResults=30",
+		url: 'https://www.googleapis.com/books/v1/volumes?q=' + search + '&startIndex=0' + '&maxResults=30',
 		type: 'GET',
 		data: search,
-		dataType: "json"
+		dataType: 'json'
 	}).then(function(callbackData) {
 		renderBook(callbackData);
 	});
@@ -26,7 +26,7 @@ function getSearchInput(searchInput) {
 
 
 function setEnterButton () {
-	document.querySelector('#search').addEventListener("keyup", function(event) {
+	document.querySelector('#search').addEventListener('keyup', function(event) {
 	  event.preventDefault();
 	  if (event.keyCode === 13) {
 		document.getElementById('searchButton').click();
@@ -38,7 +38,7 @@ function setEnterButton () {
 function renderBook(callbackData) {
 	const data = callbackData.items;
 	const viewerCanvas = document.getElementById('viewerCanvas')
-	$("#viewerCanvas").empty();
+	$('#viewerCanvas').empty();
 
 	// Loops through the book data
 	data.forEach(function(bookData) {
@@ -77,7 +77,7 @@ function renderBook(callbackData) {
 	viewerCanvas.appendChild(newBookDiv);
 
 	//Empties search div
-	$("#search").val("");
+	$('#search').val('');
 	});
 };
 

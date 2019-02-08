@@ -17,6 +17,7 @@ Each query returns the author, title, publisher, and preview.  Each of these wil
 
 ## Challenges
 1. Finding the appropriate tools and technologies to run my test cases.  So far I've tried: mocha and chai as well as karma, but I am still working on this.
+<strong>I have found a sucessful test automation tool called Jest to run my test cases.  To view the successful execution of my test cases please type `npm run test` in your command line</strong>
 2. For some reason, deploying to heroku proved to be relatively difficult compared to my past experiences. (several times I received errors regarding inability to parse the package.json)  
 <strong> You can visit the application <a href="https://grandsuccess87.github.io/GoogleBookSearch/">here</a> on Github. </strong>
 3. Maintaining content between web browser tabs for the user.  For now, I used local storage as a way to store data in the users' current browswer session.
@@ -48,6 +49,11 @@ Each query returns the author, title, publisher, and preview.  Each of these wil
 
 **Search Query with Topic**
 ![topic_image](/assets/images/GBS_Image4b.png)
+
+<hr>
+
+**Search Query with test execution**
+![test_case_image](/assets/images/bookjs_testcase.png)
 
 <hr>
 
