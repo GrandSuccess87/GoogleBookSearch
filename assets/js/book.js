@@ -1,6 +1,9 @@
 // function sum (a, b) {
 // 	return a + b;
 // }
+function sum(a, b) {
+  return a + b;
+}
 
 function getSearchInput(searchInput) {
 	return searchInput.val().trim();
@@ -8,4 +11,4 @@ function getSearchInput(searchInput) {
 
 
 module.exports = getSearchInput;
-// module.exports = sum;
+module.exports = sum;
