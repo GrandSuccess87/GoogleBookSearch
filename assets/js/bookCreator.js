@@ -14,6 +14,10 @@ function setBookTitleAttributes(book, localStorage) {
 	bookTitle.setAttribute('class', 'title');
 	bookTitle.href = preview;
 	title_section.appendChild(bookTitle);
+
+	if(!title) {
+		return titleLink.nodeValue = ' ';
+	}
 };
 
 // function to set the author attributes
@@ -26,24 +30,15 @@ function setBookAuthorAttributes(book, localStorage) {
 	auth_section = document.createElement('p');
 	const bookAuthor = document.createElement('a');
 	const authorLink = document.createTextNode(author[0] + ', ' + author[1]);			
-	// const authorLink_2 = document.createTextNode(', ');
-
-	// author.forEach(function(author_name) {
-	// 	console.log('author_name fxn');
-	// 	if(author_name > author_name[0]) {
-	// 		console.log('author_name > 0 TRUE');
-	// 		// const authorLink_2 = document.createTextNode(', ' + author_name[1]);
-	// 		// authorLink_2 = document.createTextNode(', ' + author_name[1])
-	// 		authorLink.appendChild(authorLink_2);
-	// 	}
-	// });
-
 	bookAuthor.appendChild(authorLink);
 	bookAuthor.title = 'Book_Author'
 	bookAuthor.setAttribute('class', 'author');
 	bookAuthor.href = preview;
 	auth_section.appendChild(bookAuthor);
 
+	if(!author) {
+		return authorLink.nodeValue = ' ';
+	}
 	
 };
 
@@ -63,6 +58,10 @@ function setBookPublisherAttributes (book, localStorage) {
 	bookPublisher.setAttribute('class', 'publisher');
 	bookPublisher.href = preview;
 	pub_section.appendChild(bookPublisher);
+
+	if(!publisher) {
+		return publisherLink.nodeValue = ' ';
+	}
 };
 
 // function to set the image attributes
@@ -81,6 +80,11 @@ function setBookImageAttributes(book, localStorage) {
 	bookImage.setAttribute('class', 'thumbnail');
 	bookImage.setAttribute('src', smallThumbnail);
 	bookImageLink.appendChild(bookImage);
+
+	if(!smallThumbnail) {
+		return bookImage.nodeValue = ' ';
+	}
+
 };
 
 // function to set the preview attributes
@@ -98,4 +102,8 @@ function setBookPreview (book, localStorage) {
 	bookPreview.setAttribute('class', 'preview');
 	bookPreview.href = preview;
 	link_section.appendChild(bookPreview);
+
+	if(!preview) {
+		return linkText.nodeValue = ' ';
+	}
 };
