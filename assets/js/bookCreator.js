@@ -23,15 +23,28 @@ function setBookAuthorAttributes(book, localStorage) {
 
 	localStorage.setItem('author', author);
 	localStorage.getItem('author');
-
 	auth_section = document.createElement('p');
 	const bookAuthor = document.createElement('a');
-	const authorLink = document.createTextNode(author);
+	const authorLink = document.createTextNode(author[0] + ', ' + author[1]);			
+	// const authorLink_2 = document.createTextNode(', ');
+
+	// author.forEach(function(author_name) {
+	// 	console.log('author_name fxn');
+	// 	if(author_name > author_name[0]) {
+	// 		console.log('author_name > 0 TRUE');
+	// 		// const authorLink_2 = document.createTextNode(', ' + author_name[1]);
+	// 		// authorLink_2 = document.createTextNode(', ' + author_name[1])
+	// 		authorLink.appendChild(authorLink_2);
+	// 	}
+	// });
+
 	bookAuthor.appendChild(authorLink);
 	bookAuthor.title = 'Book_Author'
 	bookAuthor.setAttribute('class', 'author');
 	bookAuthor.href = preview;
 	auth_section.appendChild(bookAuthor);
+
+	
 };
 
 // function to set the publisher attributes
