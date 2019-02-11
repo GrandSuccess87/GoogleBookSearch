@@ -97,13 +97,6 @@ function setBookPreview (book, localStorage) {
 	if(!preview) {
 		return linkText.nodeValue = ' ';
 	}
-};
+}; 
 
-function setBookLimit (bookData, book) {
-	 maxResults = null;
-	 if(maxResults < 15) {
-	   alert('A limited number of results were returned, please feel free to check out the results listing we have compiled which matches your search');
-	   console.log(book);
-	 };
 
-};
