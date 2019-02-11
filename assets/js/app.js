@@ -3,7 +3,6 @@ function bookQuery(event) {
 	// Grabs the user input
 	const search = getSearchInput($('#search'));
 	localStorage.setItem('last search ', $('#search').val().trim());
-	localStorage.getItem('last search');
 	// Checks to see if the input field is empty
 	if(search == '' || search == null) {
 		alert('Your search field is empty.  Please enter the book or author you would like to search.');
@@ -36,13 +35,14 @@ function setEnterButton () {
 // Loops through the callbackData
 function renderBook(callbackData) {
 	const data = callbackData.items;
-	console.log(data);
 	const viewerCanvas = document.getElementById('viewerCanvas');
 	$('#viewerCanvas').empty();
 	// Loops through the book data
 	data.forEach(function(bookData) {
 		// Declare variables for the book data
 		const book = bookData.volumeInfo;
+
+			// console.log(book);
 		// Creates a new div for each book in the array
 		const newBookDiv = document.createElement('div');
 		newBookDiv.setAttribute('class', 'book');
@@ -67,6 +67,8 @@ function renderBook(callbackData) {
 		viewerCanvas.appendChild(newBookDiv);
 		//Empties search div
 		$('#search').val('');
+
+		setBookLimit(bookData, book);
 	});
 };
 

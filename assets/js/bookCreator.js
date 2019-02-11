@@ -4,8 +4,6 @@ function setBookTitleAttributes(book, localStorage) {
 	const preview = book.previewLink;
 
 	localStorage.setItem("title", title);
-	localStorage.getItem("title");
-
 	title_section = document.createElement('p');
 	const bookTitle = document.createElement('a');
 	const titleLink = document.createTextNode(title);
@@ -26,7 +24,6 @@ function setBookAuthorAttributes(book, localStorage) {
 	const preview = book.previewLink;
 
 	localStorage.setItem('author', author);
-	localStorage.getItem('author');
 	auth_section = document.createElement('p');
 	const bookAuthor = document.createElement('a');
 	const authorLink = document.createTextNode(author[0] + ', ' + author[1]);			
@@ -48,8 +45,6 @@ function setBookPublisherAttributes (book, localStorage) {
 	const preview = book.previewLink;
 
 	localStorage.setItem('publisher', publisher);
-	localStorage.getItem('publisher');
-
 	pub_section = document.createElement('p');
 	const bookPublisher = document.createElement('a');
 	const publisherLink = document.createTextNode('Published By ' + publisher);
@@ -72,8 +67,6 @@ function setBookImageAttributes(book, localStorage) {
 	const preview = book.previewLink;
 
 	localStorage.setItem('thumbnail', smallThumbnail);
-	localStorage.getItem('thumbnail');
-
 	bookImageLink = document.createElement('a');
 	bookImageLink.href = preview;
 	const bookImage = document.createElement('img');
@@ -92,8 +85,6 @@ function setBookPreview (book, localStorage) {
 	const preview = book.previewLink;
 
 	localStorage.setItem('preview', preview);
-	localStorage.getItem('preview');
-
 	link_section = document.createElement('p');
 	const bookPreview = document.createElement('a');
 	const linkText = document.createTextNode('Preview');
@@ -106,4 +97,13 @@ function setBookPreview (book, localStorage) {
 	if(!preview) {
 		return linkText.nodeValue = ' ';
 	}
+};
+
+function setBookLimit (bookData, book) {
+	 maxResults = null;
+	 if(maxResults < 15) {
+	   alert('A limited number of results were returned, please feel free to check out the results listing we have compiled which matches your search');
+	   console.log(book);
+	 };
+
 };
