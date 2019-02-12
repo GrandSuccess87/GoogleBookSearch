@@ -112,6 +112,7 @@ function setBookPreview (book, localStorage) {
 	}
 }; 
 
+// function to create the book and append all data
 function createBook () { 
 	// Creates a new div for each book in the array
 	const newBookDiv = document.createElement('div');
@@ -127,64 +128,4 @@ function createBook () {
 
 };
 
-function setPagePagination () {
-	const page2 = $('#page_link_2');
-	page2.href = ('https://www.google.com/search?q=' + search + '&' + startIndex + '=20');
-}
-
-function setPagination () {
-const nav = document.createElement('nav');
-nav.setAttribute('id', 'search_results_pagination');
-nav.setAttribute('aria-label', 'Search Results Pages');
-
-const ulTag = document.createElement('ul');
-ulTag.setAttribute('class', 'pagination justify-content-left');
-
-const liPreviousTag = document.createElement('li');
-liPreviousTag.setAttribute('class', 'page-item disabled');
-
-const previousPageLink = document.createElement('a');
-previousPageLink.setAttribute('class', 'page-link');
-previousPageLink.href('#');
-previousPageLink.tabindex('-1');
-previousPageLink.setAttribute('aria-label', 'Previous');
-
-// Appends a Tag to the list Tag
-liPreviousTag.appendChild(previousPageLink);
-
-const previousSpanTag_1 = document.createElement('span');
-previousSpanTag.setAttribute('aria-hidden',' true');
-previousSpanTag.textContent = '&laquo;'
-
-// Appends first span Tag to the li Tag
-liPreviousTag.appendChild(previousSpanTag_1);
-
-const previousSpanTag_2 = document.createElement('span');
-previousSpanTag_2.setAttribute('class', 'sr-only' );
-previousSpanTag_2.textContent = 'Previous';
-
-// Appends second span Tag to the li Tag
-liPreviousTag.appendChild(previousSpanTag_2);
-
-// Pagination for page one
-// <li class="page-item"><a class="page-link" href="#">1</a></li>
-const page1 = document.createElement('li');
-page1.setAttribute('class', 'page-item');
-const page1_aTag = document.createElement('a');
-page1_aTag.setAttribute('class', 'page-link');
-page1_aTag.href('#');
-page1_aTag.textContent = '1';
-page1.appendChild(page1_aTag);
-
-// Pagination for page two
-const page2 = document.createElement('li');
-page2.setAttribute('class', 'page-item');
-
-const page2_aTag = document.createElement('a');
-page2_aTag.setAttribute('class', 'page-link');
-page1_aTag.textContent = '2';
-page2_aTag.href('https://www.google.com/search?q=' + search + '&' + startIndex + '=20');
-page2.appendChild(page2_aTag);
-
-};
 

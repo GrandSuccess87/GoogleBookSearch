@@ -57,6 +57,21 @@ Each query returns the author, title, publisher, and preview.  Each of these wil
 
 <hr>
 
+**Search Query implemented with Pagination**
+![pagination_image](/assets/images/pagination_image.png)
+
+<hr>
+
+**Search Query implemented with Bootstrap Modal**
+![bootstrap_modal](/assets/images/bookLimitModal.png)
+
+<hr>
+
+**Code base for how the application should handle an API error, for example, if a book does not exist**
+![bootstrap_modal](/assets/images/API_ERROR_1.png)
+
+<hr>
+
 ## Notes
 I had a lot of fun building this application and challenging myself in the process.  Although there is always room for improvement, I believe I was successful in retreiving the desired outcome and I feel great that I have learned so much throughout this process!
 Thank You

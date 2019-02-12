@@ -23,7 +23,7 @@ function bookQuery(event) {
 		}).then(function(callbackData) {
 			renderBook(callbackData);
 			setNoBookFound();
-			// setBookLimit(callbackData);
+			setBookLimit(callbackData);
 		}, function(reason) {
           console.log('Error: ' + reason.result.error.message);
         });
@@ -31,15 +31,15 @@ function bookQuery(event) {
 };
 
 
-// This function handles limited search results returned
-// function setBookLimit(callbackData) {
-// 	console.log('set book limit fxn hit');
-// 	// maxResults;
-// 	if(maxResults === 'maxResults < 10') {
-// 	$('#noResults_Modal').modal();
-// 	console.log(callbackData);
-// 	};
-// };
+// This function handles some limited search results returned
+function setBookLimit(callbackData) {
+	console.log('set book limit fxn hit');
+	maxResults = 'maxResults<10';
+	if(maxResults) {
+	$('#noResults_Modal').modal();
+	console.log(callbackData);
+	};
+};
 
 // Timeout function if no search is performed after 10 minutes
 const windowTimeout = setTimeout(function() {
@@ -53,7 +53,7 @@ function alertNotFound() {
 }
 
 function setNoBookFound() {
-    if(search == 'ISBN:1234'){
+    if(search == 'Full stack web development'){
     	return alertNotFound();
     }
 }
@@ -104,6 +104,31 @@ function renderBook(callbackData) {
 	});
 };
 
-// Invoke functions below
+function setPage2_Pagination () {
+	console.log('page 2 hit');
+	startIndex = 'startIndex=20';
+	let search = $('#search').val();
+	console.log(startIndex);
+	const page2 = $('#page_link_2');
+	console.log(search);
+	page2.href = 'https://www.google.com/search?q=' + search + '&' + startIndex;
+	console.log(page2);
+};
+
+function setPage3_Pagination () {
+	console.log('page 3 hit');
+	startIndex = 'startIndex=30'
+	console.log(startIndex);
+	const page3 = $('#page_link_3');
+	page3.href = 'https://www.google.com/search?q=' + search + '&' + startIndex;
+	console.log(page3);
+
+};
+
+// Invokes book query function
 document.getElementById('searchButton').addEventListener('click', bookQuery, false);
+// Handles Limited Search Results
+document.getElementById('page_link_2').addEventListener('click', setPage2_Pagination, false);
+document.getElementById('page_link_3').addEventListener('click', setPage3_Pagination, false);
+// Invokes search via return key
 setEnterButton();
