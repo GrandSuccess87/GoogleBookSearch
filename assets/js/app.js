@@ -40,6 +40,11 @@ const windowTimeout = setTimeout(function() {
 	alert("Would you like to make a search?");
 }, 600000);
 
+// Timeout function if API responds slow
+// const apiTimeout = setTimeout(function() {
+// 	alert("Sorry, we seem to be experiencing some difficulties. Please try refreshing your the page and try your search again. Thank You");
+// }, 300000);
+
 // Grabs the user input
 function getSearchInput(searchInput) {
 	return searchInput.val().trim();
