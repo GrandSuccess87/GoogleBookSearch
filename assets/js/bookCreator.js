@@ -1,9 +1,11 @@
 // function to set the title attributes 
 function setBookTitleAttributes(book, localStorage) {
+	// Declare initial variables
 	const title = book.title;
 	const preview = book.previewLink;
-
+	// Set item to local storage for data persistence
 	localStorage.setItem("title", title);
+	// Set title attributes
 	title_section = document.createElement('p');
 	const bookTitle = document.createElement('a');
 	const titleLink = document.createTextNode(title);
@@ -12,7 +14,7 @@ function setBookTitleAttributes(book, localStorage) {
 	bookTitle.setAttribute('class', 'title');
 	bookTitle.href = preview;
 	title_section.appendChild(bookTitle);
-
+	// Leaves blank if no title exists
 	if(!title) {
 		return titleLink.nodeValue = ' ';
 	}
@@ -20,10 +22,12 @@ function setBookTitleAttributes(book, localStorage) {
 
 // function to set the author attributes
 function setBookAuthorAttributes(book, localStorage) {
+	// Declare initial variables
 	const author = book.authors;
 	const preview = book.previewLink;
-
+	// Set item to local storage for data persistence
 	localStorage.setItem('author', author);
+	// Set author attributes
 	auth_section = document.createElement('p');
 	const bookAuthor = document.createElement('a');
 	const authorLink = document.createTextNode(author[0] + ', ' + author[1]);			
@@ -32,7 +36,7 @@ function setBookAuthorAttributes(book, localStorage) {
 	bookAuthor.setAttribute('class', 'author');
 	bookAuthor.href = preview;
 	auth_section.appendChild(bookAuthor);
-
+	// Leaves blank if no author(s) exists
 	if(!author) {
 		return authorLink.nodeValue = ' ';
 	};
@@ -44,10 +48,12 @@ function setBookAuthorAttributes(book, localStorage) {
 
 // function to set the publisher attributes
 function setBookPublisherAttributes (book, localStorage) {
+	// Declare initial variables
 	const publisher = book.publisher;
 	const preview = book.previewLink;
-
+	// Set item to local storage for data persistence
 	localStorage.setItem('publisher', publisher);
+	// Set publisher attributes
 	pub_section = document.createElement('p');
 	const bookPublisher = document.createElement('a');
 	const publisherLink = document.createTextNode('Published By ' + publisher);
@@ -56,7 +62,7 @@ function setBookPublisherAttributes (book, localStorage) {
 	bookPublisher.setAttribute('class', 'publisher');
 	bookPublisher.href = preview;
 	pub_section.appendChild(bookPublisher);
-
+	// Leaves blank if no publisher exists
 	if(!publisher) {
 		return publisherLink.nodeValue = ' ';
 	}
@@ -64,19 +70,21 @@ function setBookPublisherAttributes (book, localStorage) {
 
 // function to set the image attributes
 function setBookImageAttributes(book, localStorage) {
+	// Declare initial variables
 	const image = book.imageLinks;
 	const thumbnail = image.thumbnail;
 	const smallThumbnail = image.smallThumbnail;	
 	const preview = book.previewLink;
-
+	// Set item to local storage for data persistence
 	localStorage.setItem('thumbnail', smallThumbnail);
+	// Set image attributes
 	bookImageLink = document.createElement('a');
 	bookImageLink.href = preview;
 	const bookImage = document.createElement('img');
 	bookImage.setAttribute('class', 'thumbnail');
 	bookImage.setAttribute('src', smallThumbnail);
 	bookImageLink.appendChild(bookImage);
-
+	// Leaves blank if no image exists
 	if(!smallThumbnail) {
 		return bookImage.nodeValue = ' ';
 	}
@@ -85,9 +93,11 @@ function setBookImageAttributes(book, localStorage) {
 
 // function to set the preview attributes
 function setBookPreview (book, localStorage) {
+	// Declare initial variable
 	const preview = book.previewLink;
-
+	// Set item to local storage for data persistence
 	localStorage.setItem('preview', preview);
+	// Set preview attributes
 	link_section = document.createElement('p');
 	const bookPreview = document.createElement('a');
 	const linkText = document.createTextNode('Preview');
@@ -96,7 +106,7 @@ function setBookPreview (book, localStorage) {
 	bookPreview.setAttribute('class', 'preview');
 	bookPreview.href = preview;
 	link_section.appendChild(bookPreview);
-
+	// Leaves blank if no preview exists
 	if(!preview) {
 		return linkText.nodeValue = ' ';
 	}

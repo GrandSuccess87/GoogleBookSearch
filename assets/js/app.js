@@ -1,3 +1,8 @@
+let maxResults = 'maxResults=30';
+let startIndex = 'startIndex=0';
+
+$('#search_results_pagination').hide();
+
 function bookQuery(event) {
 	event.preventDefault();
 	// Grabs the user input
@@ -7,8 +12,6 @@ function bookQuery(event) {
 	if(search == '' || search == null) {
 		alert('Your search field is empty.  Please enter the book or author you would like to search.');
 	} else {
-		let maxResults = 'maxResults=30';
-		let startIndex = 'startIndex=0';
 		// Sends an HTTP GET request to the API
 		$.ajax({
 			url: 'https://www.googleapis.com/books/v1/volumes?q=' + search  + '&' + maxResults + '&' + startIndex,
@@ -17,28 +20,32 @@ function bookQuery(event) {
 			dataType: 'json'
 		}).then(function(callbackData) {
 			renderBook(callbackData);
-			setBookLimit(callbackData);
-		
-
+			// setBookLimit(callbackData);
 		});
 	}
 };
 
 // This function handles limited search results returned
-function setBookLimit(callbackData) {
-	console.log('set book limit fxn hit');
-	maxResults = 'maxResults<=10';
-	if(maxResults) {
-	$('#modalCenter').modal();
-	console.log(callbackData);
-	};
-};
+// function setBookLimit(callbackData) {
+// 	console.log('set book limit fxn hit');
+// 	// maxResults;
+// 	if(maxResults === 'maxResults=30') {
+// 	$('#modalCenter').modal();
+// 	console.log(callbackData);
+// 	};
+// };
 
+// Timeout function if no search is performed after 10 minutes
+const windowTimeout = setTimeout(function() {
+	alert("Would you like to make a search?");
+}, 600000);
 
+// Grabs the user input
 function getSearchInput(searchInput) {
 	return searchInput.val().trim();
 };
 
+// Allows the user to press enter to make a search
 function setEnterButton () {
 	document.querySelector('#search').addEventListener('keyup', function(event) {
 		event.preventDefault();
@@ -50,15 +57,14 @@ function setEnterButton () {
 
 // Loops through the callbackData
 function renderBook(callbackData) {
+	// Declare initial variables
 	const data = callbackData.items;
-	
 	const viewerCanvas = document.getElementById('viewerCanvas');
 	$('#viewerCanvas').empty();
 	// Loops through the book data
 	data.forEach(function(bookData) {
-		// Declare variables for the book data
+		// Declare variable for the book data
 		const book = bookData.volumeInfo;
-
 		// Creates a new div for each book in the array
 		const newBookDiv = document.createElement('div');
 		newBookDiv.setAttribute('class', 'book');
@@ -83,9 +89,7 @@ function renderBook(callbackData) {
 		viewerCanvas.appendChild(newBookDiv);
 		//Empties search div
 		$('#search').val('');
-
-
-
+		$('#search_results_pagination').show();
 	});
 };
 
