@@ -1,4 +1,4 @@
-let maxResults = 'maxResults=30';
+let maxResults = 'maxResults=35';
 let startIndex = 'startIndex=0';
 
 $('#search_results_pagination').hide();

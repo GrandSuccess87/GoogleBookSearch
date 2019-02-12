@@ -46,7 +46,12 @@ html,body {
   font-family: "Amazon Ember", Arial, sans-serif;
   font-weight: 400;
 }
-
+.page-item,
+.page-link {
+  color: black;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-weight: 200;
+}
 .thumbnail {
 	margin: 2% 0 4% 0;
   width: 30%;
