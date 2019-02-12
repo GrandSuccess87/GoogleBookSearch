@@ -32,7 +32,7 @@ Each query returns the author, title, publisher, and preview.  Each of these wil
 
 **External Quality Bugs Fixed**
 - The application is now cross browser compatible and book cover images no longer appear vertically stretched in Safari or Firefox.  
-*Safari, Firefox, Chrome, and Opera are all supported.*
+<strong>*Safari, Firefox, Chrome, and Opera are all supported.*</strong>
 - Undefined is now handled properly.
 - Multiple authors are now comma separated. 
 - Updated the lang attribute in the `<html>` tag to include English, Spanish, Japanese, Chinese, and Russian.  I also added a lang property called _source_ into the ajax call which is set to English by default.
