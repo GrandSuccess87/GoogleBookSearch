@@ -36,7 +36,7 @@ Each query returns the author, title, publisher, and preview.  Each of these wil
 - *Undefined*is now handled properly.
 - Multiple authors are now comma separated. 
 - Updated the lang attribute in the `<html>` tag to include English, Spanish, Japanese, Chinese, and Russian.  I also added a lang property called _source_ into the ajax call which is set to English by default.
-<br>
+
 **Internal Quality Bugs Fixed**
 - .DS_Store files have been placed in a .gitignore file.
 - Edited code to remove commented out `<link>`, `<script>`, and `<div>` tags.
