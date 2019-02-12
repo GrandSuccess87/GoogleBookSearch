@@ -9,6 +9,7 @@
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/css/style.css">
+<!--    <script src="https://apis.google.com/js/api.js"></script> -->
         <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
     </head>
     <body>
@@ -56,7 +57,7 @@
                         <div id="viewerCanvas"></div>
                         <!-- PAGINATION -->
                         <nav id="search_results_pagination" aria-label="Search Results Pages">
-                          <ul class="pagination justify-content-right">
+                          <ul class="pagination justify-content-left">
                             <li class="page-item disabled">
                               <a class="page-link" href="#" tabindex="-1" aria-label="Previous">
                               <span aria-hidden="true">&laquo;</span>
@@ -64,10 +65,9 @@
                             </li>
                             <li class="page-item"><a class="page-link" href="#">1</a></li>
                             <li class="page-item">
-                              <a class="page-link" href="#">2</a>
+                              <a class="page-link" href="https://www.googleapis.com/books/v1/volumes?q=' + search + '&' + startIndex=20">2</a>
                             </li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="https://www.googleapis.com/books/v1/volumes?q=' + search + '&' + startIndex=30">3</a></li>
                             <li class="page-item">
                               <a class="page-link" href="#" aria-label="Next">
                               <span aria-hidden="true">&raquo;</span>
@@ -76,6 +76,7 @@
                           </ul>
                         </nav>
                         <!-- END of PAGINATION -->
+                        <img src="./assets/images/poweredbyGoogle_logo.png" alt="powered by Google Logo" title="Google Logo" id="GoogleLogo1" class="google_logo justify-content-center" width="90" height="55">
                     </div>
                 </div>
             </div>

@@ -2,6 +2,7 @@ let maxResults = 'maxResults=35';
 let startIndex = 'startIndex=0';
 
 $('#search_results_pagination').hide();
+$('#GoogleLogo1').hide();
 
 function bookQuery(event) {
 	event.preventDefault();
@@ -17,13 +18,18 @@ function bookQuery(event) {
 			url: 'https://www.googleapis.com/books/v1/volumes?q=' + search  + '&' + maxResults + '&' + startIndex,
 			type: 'GET',
 			data: search,
-			dataType: 'json'
+			dataType: 'json',
+			source:'es'
 		}).then(function(callbackData) {
 			renderBook(callbackData);
+			setNoBooksFound();
 			// setBookLimit(callbackData);
-		});
+		}, function(reason) {
+          console.log('Error: ' + reason.result.error.message);
+        });
 	}
 };
+
 
 // This function handles limited search results returned
 // function setBookLimit(callbackData) {
@@ -40,9 +46,21 @@ const windowTimeout = setTimeout(function() {
 	alert("Would you like to make a search?");
 }, 600000);
 
+
+
+function alertNotFound() {
+    alert("Could not find the book, please try another search");
+}
+
+function setNoBooksFound() {
+    if(search == 'ISBN:1234'){
+    	alertNotFound();
+    }
+}
+
 // Timeout function if API responds slow
 // const apiTimeout = setTimeout(function() {
-// 	alert("Sorry, we seem to be experiencing some difficulties. Please try refreshing your the page and try your search again. Thank You");
+// 	alert("Sorry, we seem to be experiencing some difficulties. Please try refreshing the page and try your search again. Thank You");
 // }, 300000);
 
 // Grabs the user input
@@ -95,6 +113,7 @@ function renderBook(callbackData) {
 		//Empties search div
 		$('#search').val('');
 		$('#search_results_pagination').show();
+		$('#GoogleLogo1').show();
 	});
 };
 
