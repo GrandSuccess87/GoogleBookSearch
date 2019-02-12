@@ -19,10 +19,10 @@ function bookQuery(event) {
 			type: 'GET',
 			data: search,
 			dataType: 'json',
-			source:'es'
+			source:'en'
 		}).then(function(callbackData) {
 			renderBook(callbackData);
-			setNoBooksFound();
+			setNoBookFound();
 			// setBookLimit(callbackData);
 		}, function(reason) {
           console.log('Error: ' + reason.result.error.message);
@@ -35,7 +35,7 @@ function bookQuery(event) {
 // function setBookLimit(callbackData) {
 // 	console.log('set book limit fxn hit');
 // 	// maxResults;
-// 	if(maxResults === 'maxResults=30') {
+// 	if(maxResults === 'maxResults < 10') {
 // 	$('#noResults_Modal').modal();
 // 	console.log(callbackData);
 // 	};
@@ -47,21 +47,16 @@ const windowTimeout = setTimeout(function() {
 }, 600000);
 
 
-
+// Handles the API responding with an error if a book does not exist in the database
 function alertNotFound() {
     alert("Could not find the book, please try another search");
 }
 
-function setNoBooksFound() {
+function setNoBookFound() {
     if(search == 'ISBN:1234'){
     	return alertNotFound();
     }
 }
-
-// Timeout function if API responds slow
-// const apiTimeout = setTimeout(function() {
-// 	alert("Sorry, we seem to be experiencing some difficulties. Please try refreshing the page and try your search again. Thank You");
-// }, 300000);
 
 // Grabs the user input
 function getSearchInput(searchInput) {
