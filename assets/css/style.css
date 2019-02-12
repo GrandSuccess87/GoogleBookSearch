@@ -36,22 +36,31 @@ html,body {
 	margin-bottom: 1%;
 }
 
-.title,
-.author,
-.publisher,
-.preview,
 .lead {
 	color: white;
   font-size: 24px;
   font-family: "Amazon Ember", Arial, sans-serif;
   font-weight: 400;
 }
+
+
+.title,
+.author,
+.publisher,
+.preview {
+  color: yellow;
+  font-size: 24px;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-weight: 400;
+}
+
 .page-item,
 .page-link {
   color: black;
   font-family: "Amazon Ember", Arial, sans-serif;
   font-weight: 200;
 }
+
 .thumbnail {
 	margin: 2% 0 4% 0;
   width: 30%;
@@ -70,7 +79,7 @@ a:link {
 }
 
 a:visited {
-	color: hotpink;
+	color: black;
 }
 
 a:hover {
