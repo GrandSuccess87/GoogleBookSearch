@@ -52,18 +52,18 @@ Each query returns the author, title, publisher, and preview.  Each of these wil
 
 <hr>
 
-**Search Query with test execution**
-![test_case_image](/assets/images/bookjs_testcase.png)
-
-<hr>
-
 **Search Query implemented with Pagination**
 ![pagination_image](/assets/images/pagination_image.png)
 
 <hr>
 
-**Search Query implemented with Bootstrap Modal**
+**Search Query implemented with Bootstrap Modal informing the user of limited results returned**
 ![bootstrap_modal](/assets/images/bookLimitModal.png)
+
+<hr>
+
+**Successful test execution of getSearchInput() function**
+![test_case_image](/assets/images/bookjs_testcase.png)
 
 <hr>
 
