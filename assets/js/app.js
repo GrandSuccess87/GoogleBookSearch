@@ -11,7 +11,7 @@ function bookQuery(event) {
 	localStorage.setItem('last search ', $('#search').val().trim());
 	// Checks to see if the input field is empty
 	if(search == '' || search == null) {
-		alert('Your search field is empty.  Please enter the book or author you would like to search.');
+		$('#noSearchInput_Modal').modal();
 	} else {
 		// Sends an HTTP GET request to the API
 		$.ajax({
@@ -36,7 +36,7 @@ function bookQuery(event) {
 // 	console.log('set book limit fxn hit');
 // 	// maxResults;
 // 	if(maxResults === 'maxResults=30') {
-// 	$('#modalCenter').modal();
+// 	$('#noResults_Modal').modal();
 // 	console.log(callbackData);
 // 	};
 // };
@@ -54,7 +54,7 @@ function alertNotFound() {
 
 function setNoBooksFound() {
     if(search == 'ISBN:1234'){
-    	alertNotFound();
+    	return alertNotFound();
     }
 }
 
@@ -88,30 +88,22 @@ function renderBook(callbackData) {
 	data.forEach(function(bookData) {
 		// Declare variable for the book data
 		const book = bookData.volumeInfo;
-		// Creates a new div for each book in the array
-		const newBookDiv = document.createElement('div');
-		newBookDiv.setAttribute('class', 'book');
-		// assign the title, author, publisher, image, and preview link then append to the new div
-		// title
+		// Assign the title, author, publisher, image, and preview link then append to the new div
+		// Title
 		setBookTitleAttributes(book, localStorage);
-		// author
+		// Author
 		setBookAuthorAttributes(book, localStorage);
-		// publisher
+		// Publisher
 		setBookPublisherAttributes (book, localStorage);
-		// book image
+		// Book image
 		setBookImageAttributes(book, localStorage);
-		// preview
+		// Preview
 		setBookPreview (book, localStorage);
 		// Appends all data to the newBookDiv
-		newBookDiv.appendChild(link_section);
-		newBookDiv.appendChild(title_section);
-		newBookDiv.appendChild(auth_section);
-		newBookDiv.appendChild(pub_section);
-		newBookDiv.appendChild(bookImageLink);
-		// Appends new book div to the viewerCanvas div
-		viewerCanvas.appendChild(newBookDiv);
-		//Empties search div
+		createBook();
+		// Empties search div
 		$('#search').val('');
+		// Shows pagination and google logo
 		$('#search_results_pagination').show();
 		$('#GoogleLogo1').show();
 	});

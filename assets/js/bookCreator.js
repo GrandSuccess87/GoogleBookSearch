@@ -112,4 +112,19 @@ function setBookPreview (book, localStorage) {
 	}
 }; 
 
+function createBook () { 
+	// Creates a new div for each book in the array
+	const newBookDiv = document.createElement('div');
+	newBookDiv.setAttribute('class', 'book');
+	// Appends all data to the newBookDiv
+	newBookDiv.appendChild(link_section);
+	newBookDiv.appendChild(title_section);
+	newBookDiv.appendChild(auth_section);
+	newBookDiv.appendChild(pub_section);
+	newBookDiv.appendChild(bookImageLink);
+	// Appends new book div to the viewerCanvas div
+	viewerCanvas.appendChild(newBookDiv);
+
+};
+
 

@@ -34,8 +34,29 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <!-- Modal -->
-                        <div class="modal fade" id="modalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                              <!-- MODAL FOR EMPTY/NULL SEARCH FIELD -->
+                        <div class="modal fade" id="noSearchInput_Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Empty Search</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                               Your search field is empty.  Please enter the Author, Title or Topic you would like to search.
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- END OF MODAL -->
+
+                        <!-- MODAL FOR LIMITED RESULTS -->
+                        <div class="modal fade" id="noResults_Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                           <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
                               <div class="modal-header">
@@ -53,8 +74,11 @@
                             </div>
                           </div>
                         </div>
-                        <!-- Viewer Canvas -->
+                        <!-- END OF MODAL -->
+
+                        <!-- VIEWER CANVAS -->
                         <div id="viewerCanvas"></div>
+
                         <!-- PAGINATION -->
                         <nav id="search_results_pagination" aria-label="Search Results Pages">
                           <ul class="pagination justify-content-left">
@@ -76,6 +100,8 @@
                           </ul>
                         </nav>
                         <!-- END of PAGINATION -->
+
+                        <!-- POWERED BY GOOGLE LOGO -->
                         <img src="./assets/images/poweredbyGoogle_logo.png" alt="powered by Google Logo" title="Google Logo" id="GoogleLogo1" class="google_logo justify-content-center" width="90" height="55">
                     </div>
                 </div>
