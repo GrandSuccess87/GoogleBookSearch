@@ -35,8 +35,11 @@ function setBookAuthorAttributes(book, localStorage) {
 
 	if(!author) {
 		return authorLink.nodeValue = ' ';
-	}
-	
+	};
+
+	if(!author[1]) {
+		return authorLink.nodeValue = author[0];
+	};
 };
 
 // function to set the publisher attributes
