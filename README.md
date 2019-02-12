@@ -14,7 +14,7 @@ Each query returns the author, title, publisher, and preview.  Each of these wil
 6. Local Storage
 7. HTML5
 8. CSS3
-9. Jestjs
+9. Jest (testing framework)
 
 ## Challenges
 1. Finding the appropriate tools and technologies to run my test cases.  So far I've tried: mocha and chai as well as karma, but I am still working on this.
@@ -25,7 +25,7 @@ Each query returns the author, title, publisher, and preview.  Each of these wil
 <strong> You can visit the application <a href="https://grandsuccess87.github.io/GoogleBookSearch/">here</a> on Github. </strong>
 3. Maintaining content between web browser tabs for the user continues to be a challenge.  For now, I am still using local storage to store data in the users' current browswer session.
 4. I want to tackle the issue of limited results returned to the user.  I decided to go about this two ways:
-   - Pagination: The pagination shows up great on the web application.  The mystery, still, for me is passing the search input into the `href`.  To solve this I tried making the `search` variable global, however for some reason the search field was recognized as empty despite there being input in the search field.  I also declared the `search` variable within the scope of my pagination functions and created a "click" eventListener for the functions.  In addition, I still need only 10 books per page.
+   - Pagination: The pagination shows up great on the web application.  The mystery, still, for me is passing the search input into the `href`.  To solve this I tried making the `search` variable global, however for some reason the search field was recognized as empty despite there being input in the search field.  I also declared the `search` variable within the scope of my pagination functions and created a "click" eventListener for the functions.  This is still a work in progress.  In addition, I still need only 10 books per page.
    - Bootstrap Modal: The modal also shows well on the web application.  It is definitely functional, as you will see in my Overview Section below, yet it just doesn't quite function under the condition that there are less than 10 results returned.  So this is something to work on.
 5. It is still a little unclear why a search result may return only 1 result or 10 results as opposed to 30+.
 6. I updated my code to reflect how the application should handle an API error when a book does not exist in the database.  You will also see this in my Overview Section below.  This too needs some work but nonetheless I think it is a good start.
@@ -33,7 +33,7 @@ Each query returns the author, title, publisher, and preview.  Each of these wil
 **External Quality Bugs Fixed**
 - The application is now cross browser compatible and book cover images no longer appear vertically stretched in Safari or Firefox.  
 *Safari, Firefox, Chrome, and Opera are all supported.*
-- *Undefined*is now handled properly.
+- Undefined is now handled properly.
 - Multiple authors are now comma separated. 
 - Updated the lang attribute in the `<html>` tag to include English, Spanish, Japanese, Chinese, and Russian.  I also added a lang property called _source_ into the ajax call which is set to English by default.
 
@@ -96,7 +96,7 @@ Each query returns the author, title, publisher, and preview.  Each of these wil
 <hr>
 
 ## Notes
-I had a lot of fun building this application and challenging myself in the process.  Although there is always room for improvement, I believe I was successful in retreiving the desired outcome and I feel great that I have learned so much throughout this process!
-Thank You
+I had a lot of fun building this application and challenging myself in the process.  Although there is always room for improvement, I believe I was successful in retreiving the desired outcome and I feel great that I have learned so much throughout this process!  Furthermore, I would just like to add that the feedback I received was awesome!  I appreciate that I have continued to grow as well as improve my application.
+Thank You for this Opportunity and I Look Forward to Hearing from You! 
 
 <hr>
