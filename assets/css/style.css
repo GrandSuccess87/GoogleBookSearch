@@ -75,7 +75,7 @@ html,body {
 }
 
 a:link {
-	color: hotpink;
+	color: hotpink2;
 }
 
 a:visited {
@@ -710,6 +710,7 @@ a:active {
       margin-bottom: 16%;
   }
 }
+
 
 /* WEB */
 @media only screen and (max-width: 300px){

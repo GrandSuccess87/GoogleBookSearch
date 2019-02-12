@@ -52,11 +52,11 @@ function alertNotFound() {
     alert("Could not find the book, please try another search");
 }
 
-function setNoBookFound() {
+const setNoBookFound = setTimeout(function() {
     if(search == 'Full stack web development'){
     	return alertNotFound();
     }
-}
+}, 60000);
 
 // Grabs the user input
 function getSearchInput(searchInput) {
