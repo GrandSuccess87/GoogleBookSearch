@@ -25,19 +25,18 @@ Each query returns the author, title, publisher, and preview.  Each of these wil
 <strong> You can visit the application <a href="https://grandsuccess87.github.io/GoogleBookSearch/">here</a> on Github. </strong>
 3. Maintaining content between web browser tabs for the user continues to be a challenge.  For now, I am still using local storage to store data in the users' current browswer session.
 4. I want to tackle the issue of limited results returned to the user.  I decided to go about this two ways:
-   *Pagination: The pagination shows up great on the web application.  The mystery, still, for me is passing the search input into the `href`.  To solve this I tried making the `search` variable global, however for some reason the search field was recognized as empty despite there being input in the search field.  I also declared the `search` variable within the scope of my pagination functions and created a "click" eventListener for the functions.  In addition, I still need only 10 books per page.*
-   *Bootstrap Modal: The modal also shows well on the web application.  It is definitely functional, as you will see in my Overview Section below, yet it just doesn't quite function under the condition that there are less than 10 results returned.  So this is something to work on.*
+   - Pagination: The pagination shows up great on the web application.  The mystery, still, for me is passing the search input into the `href`.  To solve this I tried making the `search` variable global, however for some reason the search field was recognized as empty despite there being input in the search field.  I also declared the `search` variable within the scope of my pagination functions and created a "click" eventListener for the functions.  In addition, I still need only 10 books per page.
+   - Bootstrap Modal: The modal also shows well on the web application.  It is definitely functional, as you will see in my Overview Section below, yet it just doesn't quite function under the condition that there are less than 10 results returned.  So this is something to work on.
 5. It is still a little unclear why a search result may return only 1 result or 10 results as opposed to 30+.
 6. I updated my code to reflect how the application should handle an API error when a book does not exist in the database.  You will also see this in my Overview Section below.  This too needs some work but nonetheless I think it is a good start.
 
 **External Quality Bugs Fixed**
 - The application is now cross browser compatible and book cover images no longer appear vertically stretched in Safari or Firefox.  
-<br>
 *Safari, Firefox, Chrome, and Opera are all supported.*
-- *<strong>Undefined</strong>*is now handled properly.
+- *Undefined*is now handled properly.
 - Multiple authors are now comma separated. 
-- Updated the lang attribute in the `<html>` tag to include English, Spanish, Japanese, Chinese, and Russian.  I also added a lang property called *source* into the ajax call which is set to English by default.
-
+- Updated the lang attribute in the `<html>` tag to include English, Spanish, Japanese, Chinese, and Russian.  I also added a lang property called _source_ into the ajax call which is set to English by default.
+<br>
 **Internal Quality Bugs Fixed**
 - .DS_Store files have been placed in a .gitignore file.
 - Edited code to remove commented out `<link>`, `<script>`, and `<div>` tags.
